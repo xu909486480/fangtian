@@ -1,0 +1,137 @@
+.agentdetail{
+		height:100%;
+		background:rgba(245,245,245,1);
+	}
+	.assess_head{
+		background: #ffffff;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 32rpx;
+		image{
+			width: 22rpx;
+			height: 40rpx;
+		}
+		text:nth-child(2){
+			font-size:46rpx;
+			font-weight:500;
+			color:rgba(25,25,25,1);
+			line-height:64rpx;
+		}
+		text:nth-child(3){
+			font-size:34rpx;
+			color:rgba(25,25,25,1);
+			line-height:48rpx;
+		}
+	}
+	
+	.main{
+		background: #ffffff;
+		padding: 0 32rpx;
+		margin-bottom: 30rpx;
+	}
+	.main_img{
+		image{
+			width:686rpx;
+			height:342rpx;
+			border-radius:20rpx;
+			background: #FA6400;
+		}
+	}
+	.main_auth{
+		display: flex;
+		.auth_l{
+			image{
+				width:90rpx;
+				height:90rpx;
+				background:rgba(238,238,238,1);
+			}
+		}
+		.auth_r{
+			display: flex;
+			flex-direction: column;
+			margin-left: 20rpx;
+			text:nth-child(1){
+				font-size:34rpx;
+				font-weight:500;
+				color:rgba(25,25,25,1);
+				line-height:48rpx;
+			}
+			text:nth-child(2){
+				font-size:26rpx;
+				color:rgba(25,25,25,1);
+				line-height:36rpx;
+			}
+		}
+	}
+	
+	.main_list{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		view{
+			display: flex;
+			flex-direction: column;
+			text:nth-child(1){
+				font-size:60rpx;
+				font-weight:bold;
+				color:rgba(25,25,25,1);
+				line-height:70rpx;
+				text{
+					font-size:26rpx;
+					color: #191919;
+				}
+			}
+			text:nth-child(2){
+				font-size:30rpx;
+				color:rgba(102,102,102,1);
+				line-height:42rpx;
+			}
+		}
+	}
+	.title{
+		text{
+			font-size:40rpx;
+			color:rgba(25,25,25,1);
+			line-height:56rpx;
+		}
+	}
+	.map_site{
+		text{
+			font-size:34rpx;
+			color:rgba(25,25,25,1);
+			line-height:48rpx;
+		}
+	}
+	.borker{
+		padding: 0 32rpx;
+		background: #ffffff;
+		.borker_btn{
+			height:90rpx;
+			background:rgba(245,245,245,1);
+			border-radius:10rpx;
+			text-align: center;
+			text{
+				font-size:30rpx;
+				color:rgba(25,25,25,1);
+				line-height:90rpx;
+			}
+		}
+	}
+	
+	.detail{
+		background: #ffffff;
+		.borker_btn{
+			margin: 0 32rpx;
+			height:90rpx;
+			background:rgba(245,245,245,1);
+			border-radius:10rpx;
+			text-align: center;
+			text{
+				font-size:30rpx;
+				color:rgba(25,25,25,1);
+				line-height:90rpx;
+			}
+		}
+	}
+	

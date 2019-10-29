@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-datetime-picker": "/wxcomponents/vant/dist/datetime-picker/index",
+    "van-popup": "/wxcomponents/vant/dist/popup/index",
+    "detail": "/components/detail/detail",
+    "navbar": "/components/navbar/navbar"
+  }
+}

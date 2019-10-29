@@ -1,0 +1,12 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "van-rate": "/wxcomponents/vant/dist/rate/index",
+    "van-goods-action": "/wxcomponents/vant/dist/goods-action/index",
+    "van-goods-action-icon": "/wxcomponents/vant/dist/goods-action-icon/index",
+    "van-goods-action-button": "/wxcomponents/vant/dist/goods-action-button/index",
+    "detailswiper": "/components/detailswiper/detailswiper",
+    "online": "/components/online/online",
+    "alltab": "/components/alltab/alltab"
+  }
+}

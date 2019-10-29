@@ -1,0 +1,10 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "detailswiper": "/components/detailswiper/detailswiper",
+    "refer": "/components/refer/refer",
+    "seat": "/components/seat/seat",
+    "listfamily": "/components/listfamily/listfamily",
+    "online": "/components/online/online"
+  }
+}

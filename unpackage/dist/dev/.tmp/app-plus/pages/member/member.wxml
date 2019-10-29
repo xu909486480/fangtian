@@ -1,0 +1,1 @@
+<view class="member data-v-7bdf9110"><navbar vue-id="1" titleName="{{titleName}}" class="data-v-7bdf9110" bind:__l="__l"></navbar></view>

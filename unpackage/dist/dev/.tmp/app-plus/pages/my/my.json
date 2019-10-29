@@ -1,0 +1,6 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "grid": "/components/grid/grid"
+  }
+}

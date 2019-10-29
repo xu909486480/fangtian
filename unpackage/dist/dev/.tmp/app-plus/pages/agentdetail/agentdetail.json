@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "alltab": "/components/alltab/alltab",
+    "refer": "/components/refer/refer",
+    "detail": "/components/detail/detail"
+  }
+}

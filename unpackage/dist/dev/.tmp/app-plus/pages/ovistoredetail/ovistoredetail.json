@@ -1,0 +1,8 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "detailswiper": "/components/detailswiper/detailswiper",
+    "detail": "/components/detail/detail",
+    "online": "/components/online/online"
+  }
+}

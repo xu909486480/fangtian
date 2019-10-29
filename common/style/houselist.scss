@@ -1,0 +1,117 @@
+.newlist{
+	}
+	// 头部
+	.index_head {
+			display: flex;
+			justify-content: space-between;
+			box-sizing: border-box;
+			.head_left {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				margin-top: 8rpx;
+				image {
+					width: 22rpx;
+					height: 40rpx;
+				}
+			}
+			.head_center {
+				margin-top:4rpx;
+				padding: 0 20rpx;
+				position: relative;
+				input {
+					box-sizing: border-box;
+					width: 520rpx;
+					height: 72rpx;
+					background: rgba(245, 245, 245, 1);
+					border-radius: 36rpx;
+					padding-left: 80rpx;
+					font-size:30rpx;
+					
+					color:rgba(153,153,153,1);
+					line-height:42rpx;
+				}
+				image {
+					width: 30rpx;
+					height: 30rpx;
+					position: absolute;
+					top: 22rpx;
+					left: 50rpx;
+				}
+			}
+			.head_right {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				margin-top: 8rpx;
+				image {
+					width: 42rpx;
+					height: 44rpx;
+				}
+				text {
+					font-size: 18rpx;
+					font-weight: 400;
+					color: rgba(25, 25, 25, 1);
+					margin-top: 6rpx;
+				}
+			}
+		}
+
+
+		
+		//tab二级菜单选项
+		.all_sort{
+			margin-top:32rpx;
+			display: flex;
+			justify-content: space-between;
+			view{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text{
+					font-size:30rpx;
+					
+					color:rgba(25,25,25,1);
+					line-height:42rpx;
+				}
+				image{
+					margin-left:14rpx;
+					width:12rpx;
+					height:8rpx;
+				}
+			}
+		}
+		//tab选项卡
+		.tab_index {
+			display: flex;
+			width: 100%;
+			margin: 30rpx 0 40rpx;
+			view {
+				width: 156rpx;
+				height: 60rpx;
+				background: rgba(255, 255, 255, 1);
+				border-radius: 30rpx;
+				border: 2rpx solid rgba(238, 238, 238, 1);
+				line-height: 60rpx;
+				text-align: center;
+				font-size: 26rpx;
+				font-weight: 400;
+				color: rgba(25, 25, 25, 1);
+				margin-right: 20rpx;
+			}
+			view.btn_active {
+				width: 156rpx;
+				height: 60rpx;
+				background: rgba(255, 255, 255, 1);
+				border-radius: 30rpx;
+				border: 2rpx solid rgba(250, 100, 0, 1);
+				line-height: 60rpx;
+				text-align: center;
+				font-size: 26rpx;
+				font-weight: 400;
+				margin-right: 20rpx;
+				color: rgba(250, 100, 0, 1);
+			}
+		}

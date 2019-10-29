@@ -1,0 +1,144 @@
+.issue{
+		height: 100%;
+		background:rgba(245,245,245,1);
+	}
+	.issue_t{
+		padding-left:32rpx;
+		background: #ffffff;
+		margin-bottom: 30rpx;
+		.t_area{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20rpx 0;
+			border-bottom: 2rpx solid #F5F5F5;
+			.area_l{
+				text{
+					font-size:34rpx;
+					color:rgba(102,102,102,1);
+					line-height:48rpx;
+				}
+			}
+			.area_r{
+				display: flex;
+				align-items: center;
+				margin-right: 32rpx;
+				input{
+					text-align: right;
+				}
+				image{
+					margin-left: 10rpx;
+					width: 16rpx;
+					height: 30rpx;
+					
+				}
+			}
+		}
+		.t_rent{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20rpx 0;
+			.rent_l{
+				text{
+					font-size:34rpx;
+					color:rgba(102,102,102,1);
+					line-height:48rpx;
+				}
+			}
+			.rent_r{
+				display: flex;
+				align-items: center;
+				margin-right: 32rpx;
+				input{
+					
+					text-align: right;
+				}
+				image{
+					margin-left: 10rpx;
+					width: 32rpx;
+					height: 34rpx;
+				}
+			}
+		}
+	}
+	
+	.issue_c{
+		padding-left:32rpx;
+		background: #ffffff;
+		.t_rent{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20rpx 0;
+			border-bottom: 2rpx solid #F5F5F5;
+			.rent_l{
+				text{
+					font-size:34rpx;
+					color:rgba(102,102,102,1);
+					line-height:48rpx;
+				}
+			}
+			.rent_r{
+				display: flex;
+				align-items: center;
+				margin-right: 32rpx;
+				input{
+					
+					text-align: right;
+				}
+				image{
+					margin-left: 10rpx;
+					width: 32rpx;
+					height: 34rpx;
+				}
+			}
+		}
+	}
+	
+	.issue_b{
+		background: #ffffff;
+		padding: 0 32rpx;
+		
+		.b_txt{
+			margin: 16rpx 0;
+			text{
+				font-size:26rpx;
+				color:rgba(153,153,153,1);
+				line-height:36rpx;
+			}
+		}
+		.b_inner{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			view{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				image{
+					width: 104rpx;
+					height: 104rpx;
+					background: #FA6400;
+				}
+				text{
+					font-size:30rpx;
+					color:rgba(153,153,153,1);
+					line-height:42rpx;
+				}
+			}
+		}
+	}
+	
+	.issue_btn{
+		height:90rpx;
+		background:linear-gradient(225deg,rgba(245,102,7,1) 0%,rgba(247,156,0,1) 100%);
+		border-radius:45rpx;
+		text-align: center;
+		text{
+			font-size:34rpx;
+			color:rgba(255,255,255,1);
+			line-height:90rpx;
+		}
+	}

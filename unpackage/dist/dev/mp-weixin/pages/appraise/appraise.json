@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-rate": "/wxcomponents/vant/dist/rate/index",
+    "navbar": "/components/navbar/navbar"
+  }
+}

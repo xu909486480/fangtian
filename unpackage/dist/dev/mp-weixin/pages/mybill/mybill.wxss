@@ -1,0 +1,251 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.navbar.data-v-6530ba92 {
+  padding: 0 32rpx;
+  background: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.navbar image.data-v-6530ba92:nth-child(1) {
+    width: 22rpx;
+    height: 40rpx;
+}
+.navbar text.data-v-6530ba92 {
+    font-size: 46rpx;
+    font-weight: 500;
+    color: #191919;
+    line-height: 64rpx;
+}
+.navbar image.data-v-6530ba92:nth-child(3) {
+    width: 44rpx;
+    height: 44rpx;
+}
+
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.list_box.data-v-3793af12 {
+  padding-left: 32rpx;
+  padding-top: 20rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.list_box .box_l image.data-v-3793af12 {
+    width: 90rpx;
+    height: 90rpx;
+}
+.list_box .box_r.data-v-3793af12 {
+    width: 608rpx;
+    border-bottom: 2rpx solid #F5F5F5;
+    padding-bottom: 20rpx;
+}
+.list_box .box_r .r_line1.data-v-3793af12 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+}
+.list_box .box_r .r_line1 text.data-v-3793af12:nth-child(1) {
+        font-size: 30rpx;
+        color: #191919;
+        line-height: 42rpx;
+}
+.list_box .box_r .r_line1 text.data-v-3793af12:nth-child(2) {
+        font-size: 30rpx;
+        font-weight: 500;
+        color: #191919;
+        line-height: 42rpx;
+        padding-right: 32rpx;
+}
+.list_box .box_r .r_line2 text.data-v-3793af12 {
+      font-size: 26rpx;
+      color: #999999;
+      line-height: 36rpx;
+}
+
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.bg.data-v-b3ceed50 {
+  background: #FFFFFF;
+}
+.mybill.data-v-b3ceed50 {
+  height: 100%;
+  background: whitesmoke;
+}
+.mybill .mybill_list.data-v-b3ceed50 {
+    margin-bottom: 30rpx;
+    background: #FFFFFF;
+}
+.mybill .mybill_list .list_tab.data-v-b3ceed50 {
+      border-bottom: 2rpx solid #F5F5F5;
+      padding: 30rpx 32rpx 20rpx;
+}
+.mybill .mybill_list .list_tab .tab_l.data-v-b3ceed50 {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+}
+.mybill .mybill_list .list_tab .tab_l text.data-v-b3ceed50 {
+          font-size: 34rpx;
+          font-weight: 500;
+          color: #191919;
+          line-height: 48rpx;
+}
+.mybill .mybill_list .list_tab .tab_l image.data-v-b3ceed50 {
+          margin-left: 10rpx;
+          width: 20rpx;
+          height: 12rpx;
+}
+.mybill .mybill_list .list_tab .tab_r.data-v-b3ceed50 {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+}
+.mybill .mybill_list .list_tab .tab_r .r_l text.data-v-b3ceed50:nth-child(1) {
+          font-size: 26rpx;
+          color: #999999;
+          line-height: 36rpx;
+}
+.mybill .mybill_list .list_tab .tab_r .r_l text.data-v-b3ceed50:nth-child(2) {
+          font-size: 26rpx;
+          color: #999999;
+          line-height: 36rpx;
+}
+.mybill .mybill_list .list_tab .tab_r .r_r.data-v-b3ceed50 {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+          -webkit-justify-content: space-between;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+}
+.mybill .mybill_list .list_tab .tab_r .r_r text.data-v-b3ceed50 {
+            font-size: 26rpx;
+            color: #999999;
+            line-height: 36rpx;
+}
+.mybill .mybill_list .list_tab .tab_r .r_r image.data-v-b3ceed50 {
+            margin-left: 16rpx;
+            width: 16rpx;
+            height: 30rpx;
+}
+

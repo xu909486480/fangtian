@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "navbar": "/components/navbar/navbar",
+    "bill-detail": "/components/billDetail/billDetail"
+  }
+}

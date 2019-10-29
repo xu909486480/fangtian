@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "headnav": "/components/headnav/headnav",
+    "refer": "/components/refer/refer"
+  }
+}

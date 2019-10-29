@@ -1,0 +1,109 @@
+.consider {
+		
+	}
+	.tab {
+		padding: 0 32rpx;
+		display: flex;
+
+		view {
+			font-size: 34rpx;
+			font-weight: 400;
+			color: rgba(25, 25, 25, 1);
+			line-height: 80rpx;
+			position: relative;
+			margin-right: 40rpx;
+		}
+
+		.active {
+			color: #FA6400;
+		}
+
+		.active:after {
+			content: '';
+			display: inline-block;
+			width: 16rpx;
+			height: 8rpx;
+			background: rgba(250, 100, 0, 1);
+			border-radius: 4rpx;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: 0 auto;
+		}
+	}
+	.consider_new{
+		padding: 0 32rpx;
+		.new_img{
+			position: relative;
+			image{
+				width: 686rpx;
+				height: 342rpx;
+			}
+			.sign{
+				width: 48rpx;
+				height: 64rpx;
+				position: absolute;
+				left:32rpx;
+				top:0;
+			}
+			.sign2{
+				width: 48rpx;
+				height: 64rpx;
+				position: absolute;
+				left:122rpx;
+				top:0;
+			}
+			.pay{
+				width: 50rpx;
+				height: 44rpx;
+				position: absolute;
+				top:30rpx;
+				right:28rpx;
+			}
+		}
+		.new_site{
+			
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			text:nth-child(1){
+				font-size:40rpx;
+				font-weight:500;
+				color:rgba(25,25,25,1);
+				line-height:56rpx;
+			}
+			text:nth-child(2){
+				font-size:30rpx;
+				
+				color:rgba(153,153,153,1);
+				line-height:42rpx;
+			}
+		}
+		.new_seat{
+			display: flex;
+			align-items: center;
+			
+			image{
+				width: 34rpx;
+				height: 36rpx;
+			}
+			text{
+				font-size:30rpx;
+				
+				color:rgba(153,153,153,1);
+				line-height:42rpx;
+			}
+		}
+		.new_number{
+			text{
+				font-size:46rpx;
+				font-weight:500;
+				color:rgba(250,100,0,1);
+				line-height:64rpx;
+			}
+			text:nth-child(2){
+				font-size:26rpx;
+			}
+		}
+	}

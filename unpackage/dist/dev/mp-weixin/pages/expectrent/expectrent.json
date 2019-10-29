@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-search": "/wxcomponents/vant/dist/search/index",
+    "navbar": "/components/navbar/navbar",
+    "alltab": "/components/alltab/alltab",
+    "detail": "/components/detail/detail"
+  }
+}

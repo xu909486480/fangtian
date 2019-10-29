@@ -1,0 +1,1 @@
+<view class="mapsearch data-v-7642b5c2"><navbar vue-id="1" titleName="{{titleName}}" share="{{share}}" class="data-v-7642b5c2" bind:__l="__l"></navbar><sort style="padding-top:30rpx;" vue-id="2" sort="{{sort}}" class="data-v-7642b5c2" bind:__l="__l"></sort><map style="height:1080rpx;width:750rpx;" class="data-v-7642b5c2"></map></view>

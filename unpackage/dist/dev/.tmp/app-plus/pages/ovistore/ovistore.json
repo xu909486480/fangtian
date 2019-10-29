@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "headnav": "/components/headnav/headnav",
+    "swiper": "/components/swiper/swiper",
+    "detail": "/components/detail/detail",
+    "grid": "/components/grid/grid"
+  }
+}

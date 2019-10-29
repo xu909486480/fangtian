@@ -1,0 +1,437 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		// tabBar首页
+		{
+			"path": "pages/index/index",
+			"style": {
+			}
+		},
+		// tabBar商城页
+		{
+			"path": "pages/shop/shop",
+			"style": {
+			}
+		},
+		// tabBar消息页
+		{
+			"path": "pages/news/news",
+			"style": {
+			}
+		},
+		// tabBar我的页
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationStyle":"custom"
+			}
+		},
+		// 注册
+		{
+			"path": "pages/reg/reg"
+		},
+		// 设置密码
+		{
+			"path": "pages/setcode/setcode"
+		},
+		// 登录
+		{
+			"path": "pages/login/login"
+		},
+		// 找回密码
+		{
+			"path": "pages/findcode/findcode"
+		},
+		// 新房版本4  
+		{
+			"path": "pages/bridal/bridal"
+		},
+		{
+			"path": "pages/newlist/newlist"
+		},
+		// 租房
+		{
+			"path": "pages/renting/renting"
+		},
+		// 新房列表
+		{
+			"path": "pages/familylist/familylist"
+		},
+		// 合租房详情
+		{
+			"path": "pages/joinhouse/joinhouse",
+			"style": {
+				"navigationStyle":"custom"
+			}
+		},
+		// 预约看房
+		{
+			"path": "pages/ordertable/ordertable",
+			"style":{
+				"usingComponents": {
+					"van-datetime-picker": "/wxcomponents/vant/dist/datetime-picker/index",
+					 "van-popup": "/wxcomponents/vant/dist/popup/index"
+				}
+			}
+		},
+		
+		{
+			"path": "pages/consider/consider"
+		},
+		// 佣金方案
+		{
+			"path": "pages/commission/commission"
+		},
+		// 动态列表
+		{
+			"path": "pages/dynamiclist/dynamiclist"
+		},
+		// 首页经纪人店铺
+		{
+			"path": "pages/borker/borker",
+			"style":{
+				"usingComponents":{
+					"van-rate": "/wxcomponents/vant/dist/rate/index"
+				}
+			}
+		},
+		// 二手房
+		{
+			"path": "pages/secondhand/secondhand"
+		},
+		// 二手房详情
+		{
+			"path": "pages/secondhanddetail/secondhanddetail",
+			"style": {
+				"navigationStyle":"custom"
+			}
+		},
+		// 小区详情
+		{
+			"path": "pages/plotdetail/plotdetail",
+			"style": {
+				"navigationStyle":"custom"
+			}
+		},
+		// 商铺
+		{
+			"path": "pages/ovistore/ovistore"
+		},
+		// 商铺
+		// {
+		// 	"path": "pages/ovistore/ovistore"
+		// },
+		// 商品详情
+		{
+			"path": "pages/productdetail/productdetail",
+			"style": {
+				"navigationStyle":"custom",
+				"usingComponents": {
+					"van-rate": "/wxcomponents/vant/dist/rate/index",
+					"van-goods-action": "/wxcomponents/vant/dist/goods-action/index",
+				    "van-goods-action-icon": "/wxcomponents/vant/dist/goods-action-icon/index",
+				    "van-goods-action-button": "/wxcomponents/vant/dist/goods-action-button/index"
+				}
+			}
+		},
+		// 商城分类
+		{
+			"path": "pages/shopsort/shopsort",
+			"style":{
+				"usingComponents": {
+				  "van-sidebar": "/wxcomponents/vant/dist/sidebar/index",
+				  "van-sidebar-item": "/wxcomponents/vant/dist/sidebar-item/index"
+				}
+			}
+		},
+		 // 商铺详情
+		{
+			"path": "pages/ovistoredetail/ovistoredetail",
+			"style": {
+				"navigationStyle":"custom"
+			}
+		},
+		// 写字楼
+		{
+			"path": "pages/offices/offices"
+		},
+		// 贷款计算结果
+		{
+			"path": "pages/calculator/calculator"
+		},
+		// 用户点评
+		{
+			"path": "pages/remark/remark"
+		},
+		// 客户评价
+		{
+			"path": "pages/appraise/appraise",
+			"style":{
+				"usingComponents":{
+					"van-rate": "/wxcomponents/vant/dist/rate/index"
+				}
+			}
+		},
+		// 位置及周边
+		{
+			"path": "pages/ambitus/ambitus"
+		},
+		// 地图找房
+		{
+			"path": "pages/mapsearch/mapsearch"
+		},
+		// 地图找房详情
+		{
+			"path": "pages/mapsearchdetail/mapsearchdetail"
+		},
+		// 位置及周边
+		{
+			"path": "pages/building/building"
+		},
+		// 商业、公积金、组合贷款
+		{
+			"path": "pages/loans/loans",
+			"style":{
+				"usingComponents": {
+					"van-picker": "/wxcomponents/vant/dist/picker/index",
+					 "van-popup": "/wxcomponents/vant/dist/popup/index"
+				}
+			}
+		},
+		// 大地图，位置周边
+		{
+			"path": "pages/mapsite/mapsite"
+		},
+		// 发布租房
+		{
+			"path": "pages/issue/issue"
+		},
+		// 小区名称
+		{
+			"path": "pages/areaname/areaname",
+			"style":{
+				"usingComponents": {
+				  "van-search": "/wxcomponents/vant/dist/search/index"
+				}
+			}
+		},
+		// 小区楼栋
+		{
+			"path": "pages/areaban/areaban",
+			"style":{
+				"usingComponents": {
+				  "van-search": "/wxcomponents/vant/dist/search/index"
+				}
+			}
+		},
+		// 期望租金
+		{
+			"path": "pages/expectrent/expectrent",
+			"style":{
+				"usingComponents": {
+				  "van-search": "/wxcomponents/vant/dist/search/index"
+				}
+			}
+		},
+		// 户型详情
+		{
+			"path": "pages/housetype/housetype",
+			"style": {
+				"navigationStyle":"custom"
+			}
+		},
+		// 房屋估价
+		{
+			"path": "pages/assess/assess"
+		},
+		// 中介门店
+		{
+			"path": "pages/agent/agent"
+		},
+		// 我的钱包
+		{
+			"path": "pages/wallet/wallet",
+			"style": {
+				"navigationStyle":"custom"
+			}
+		},
+		// 余额充值
+		{
+			"path": "pages/recharge/recharge",
+			"style":{
+				"usingComponents": {
+					 "van-popup": "/wxcomponents/vant/dist/popup/index"
+				}
+			}
+		},
+		// 余额提现
+		{
+			"path": "pages/withdraw/withdraw",
+			"globalStyle":{
+				"backgroundColor":"#F5F5F5"
+			},
+			"style":{
+				"navigationBarBackgroundColor":"#F5F5F5",
+				"backgroundColor":"#F5F5F5",
+				"usingComponents": {
+					 "van-popup": "/wxcomponents/vant/dist/popup/index"
+				}
+				 
+			} 
+			
+		},
+		// 我的账单
+		{
+			"path": "pages/mybill/mybill"
+		},
+		// 我的月账单
+		{
+			"path": "pages/monbill/monbill"
+		},
+		// 我的会员
+		{
+			"path": "pages/member/member"
+		},
+		// 认证中心
+		{
+			"path": "pages/authentication/authentication"
+		},
+		// 营业执照认证
+		{
+			"path": "pages/license/license"
+		},
+		// 营业执照法人认证
+		{
+			"path": "pages/licensePeople/licensePeople"
+		},
+		// 对公账户
+		{
+			"path": "pages/openAccount/openAccount"
+		},
+		// 中介门店详情
+		{
+			"path": "pages/agentdetail/agentdetail"
+		},
+		// 个人信息
+		{
+			"path": "pages/personal/personal"
+		},
+		// 个人资料
+		{
+			"path": "pages/personalData/personalData"
+		},
+		// 开店指导
+		{
+			"path": "pages/shopGuide/shopGuide"
+		},
+		// 我的关注
+		{
+			"path": "pages/myfocus/myfocus"
+		},
+		// 公共页---页面---搜索页
+		{
+			"path": "components/search/search"
+		},
+		// 公共组件---宫格---九宫格
+		{
+			"path": "components/grid/grid"
+		},
+		// 公共组件---部分---详情
+		{
+			"path": "components/detail/detail"
+		},
+		// 公共组件---账单明细---详情
+		{
+			"path": "components/billDetail/billDetail"
+		},
+		// 公共组件---部分---顶部  返回-h3-XX
+		{
+			"path": "components/navbar/navbar"
+		},
+		// 公共组件---部分---新房详情
+		{
+			"path": "components/newdetail/newdetail",
+			"style": {
+				"navigationStyle":"custom"
+			}
+		},
+		// 公共组件---部分---顶部  返回-搜索-XX
+		{
+			"path": "components/headnav/headnav"
+		},
+		// 公共组件---部分---轮播图
+		{
+			"path": "components/swiper/swiper"
+		},
+		// 公共组件---部分---排序分类
+		{
+			"path": "components/sort/sort"
+		},
+		// 公共组件---部分---
+		{
+			"path": "components/alltab/alltab"
+		},
+		// 公共组件---部分---房型列表
+		{
+			"path": "components/houselist/houselist"
+		},
+		// 公共组件---部分---详情页轮播图
+		{
+			"path": "components/detailswiper/detailswiper"
+		},
+		// 公共组件---部分---详情页经纪人
+		{
+			"path": "components/refer/refer"
+		},
+		// 公共组件---部分---详情页位置周边
+		{
+			"path": "components/seat/seat"
+		},
+		// 公共组件---部分---详情页户型列表
+		{
+			"path": "components/listfamily/listfamily"
+		},
+		// 公共组件---底部---详情页底部在线咨询
+		{
+			"path": "components/online/online"
+		},
+		// 公共组件---部分---部分选项卡
+		{
+			"path": "components/sometab/sometab"
+		}
+	],
+	"globalStyle": {
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#8F8F94",
+		"navigationBarTitleText":""
+	},
+	"tabBar": {
+	    "selectedColor": "#FA6400",
+	    "borderStyle": "white",
+	    "list": [
+	      {
+	        "pagePath": "pages/index/index",
+	        "text": "首页",
+	        "iconPath": "static/tab_home.png",
+	        "selectedIconPath": "static/tab_home_active.png"
+	      },
+	      {
+	        "pagePath": "pages/shop/shop",
+	        "text": "商城",
+	        "iconPath": "static/tab_shop.png",
+	        "selectedIconPath": "static/tab_shop_active.png"
+	      },
+	      {
+	        "pagePath": "pages/news/news",
+	        "text": "消息",
+	        "iconPath": "static/tab_news.png",
+	        "selectedIconPath": "static/tab_news_active.png"
+	      },
+	      {
+	        "pagePath": "pages/my/my",
+	        "text": "我的",
+	        "iconPath": "static/tab_my.png",
+	        "selectedIconPath": "static/tab_my_active.png"
+	      }
+	    ]
+	  }
+}

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "swiper": "/components/swiper/swiper",
+    "sort": "/components/sort/sort",
+    "detail": "/components/detail/detail",
+    "grid": "/components/grid/grid"
+  }
+}

@@ -1,0 +1,298 @@
+.van-goods-action-button{
+		border-radius: 100%;
+	}
+	.productdetail{
+		height: 100%;
+		background:rgba(245,245,245,1);
+	}
+	.detail_t{
+		background: #FFFFFF;
+		padding: 20rpx 32rpx;
+		margin-bottom: 30rpx;
+		
+		.line1{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.line1_left{
+				text:nth-child(1){
+					font-size:26rpx;
+					font-weight:500;
+					color:rgba(250,100,0,1);
+				}
+				text:nth-child(2){
+					font-size:46rpx;
+					font-weight:500;
+					color:rgba(250,100,0,1);
+				}
+			}
+			.line1_right{
+				image{
+					width: 44rpx;
+					height: 44rpx;
+				}
+			}
+		}
+		.line2{
+			text{
+				font-size:40rpx;
+				font-weight:500;
+				color:rgba(25,25,25,1);
+				line-height:50rpx;
+			}
+		}
+		.line3{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			text:nth-child(1){
+				font-size:30rpx;
+				color:rgba(25,25,25,1);
+				line-height:42rpx;
+				text{
+					margin:0 20rpx;
+				}
+			}
+			text:nth-child(2){
+				font-size:30rpx;
+				color:rgba(153,153,153,1);
+				line-height:42rpx;
+			}
+		}
+	}
+	.detail_c{
+		background: #FFFFFF;
+		display: flex;
+		flex-direction: column;
+		padding: 20rpx 32rpx;
+		margin-bottom: 30rpx;
+		text{
+			font-size:30rpx;
+			color:rgba(25,25,25,1);
+			line-height:42rpx;
+		}
+		text:nth-child(2){
+			margin-top:10rpx;
+			font-size:30rpx;
+			color:rgba(25,25,25,1);
+			line-height:42rpx;
+		}
+	}
+	
+	.detail_b{
+		background: #FFFFFF;
+		padding: 20rpx 32rpx;
+		margin-bottom: 30rpx;
+		.b_select{
+			margin-bottom: 10rpx;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			view{
+				text{
+					font-size:30rpx;
+					color:rgba(25,25,25,1);
+					line-height:42rpx;
+				}
+			}
+			image{
+				width: 16rpx;
+				height: 30rpx;
+				float: right;
+			}
+		}
+		.b_params{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			view{
+				text{
+					font-size:30rpx;
+					color:rgba(25,25,25,1);
+					line-height:42rpx;
+				}
+			}
+			image{
+				width: 16rpx;
+				height: 30rpx;
+				float: right;
+			}
+		}
+	}
+	
+	.detail_shop{
+		background: #FFFFFF;
+		padding:30rpx 0;
+		
+		margin-bottom: 30rpx;
+		.shop_line1{
+			padding: 0 32rpx;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.line1_h3{
+				text{
+					font-size:34rpx;
+					font-weight:500;
+					color:rgba(25,25,25,1);
+					line-height:48rpx;
+				}
+			}
+			.line1_more{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text{
+					font-size:26rpx;
+					color:rgba(153,153,153,1);
+				}
+				image{
+					margin-left: 10rpx;
+					width: 16rpx;
+					height: 30rpx;
+					
+				}
+			}
+		}
+		.shop_line3{
+			display: flex;
+			padding:0 32rpx;
+			.line3_left{
+				image{
+					width: 90rpx;
+					height: 90rpx;
+					background: #FA6400;
+				}
+			}
+			.line3_right{
+				.r_inner{
+					margin-left:10rpx;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					.inner_t{
+						.t_auth{
+							text{
+								font-size:34rpx;
+								font-weight:500;
+								color:rgba(25,25,25,1);
+								line-height:48rpx;
+							}
+						}
+						.t_msg{
+							font-size:26rpx;
+							color:rgba(153,153,153,1);
+							line-height:36rpx;
+							text:nth-child(2){
+								margin-left:10rpx;
+							}
+						}
+					}
+					.inner_b{
+						image{
+							width: 90rpx;
+							height: 90rpx;
+							background: #FA6400;
+						}
+					}
+				}
+				.r_txt{
+					text{
+						font-size:34rpx;
+						color:rgba(25,25,25,1);
+						line-height:48rpx;
+					}
+				}
+				.r_img{
+					display: flex;
+					justify-content: space-between;
+					
+					image{
+						width:174rpx;
+						height:174rpx;
+						background:rgba(216,216,216,1);
+					}
+				}
+				.r_reply{
+					display: flex;
+					flex-direction: column;
+					text:nth-child(1){
+						font-size:34rpx;
+						font-weight:500;
+						color:rgba(102,102,102,1);
+						line-height:48rpx;
+					}
+					text:nth-child(2){
+						font-size:30rpx;
+						color:rgba(153,153,153,1);
+						line-height:42rpx;
+					}
+				}
+			}
+		}
+	}
+	
+	.detail_hotel{
+		
+		background: #FFFFFF;
+		padding-bottom: 100rpx;
+		.hotel_lnto{
+			padding: 0 32rpx;
+			border-bottom: 2rpx solid #FFFFFF;
+			display: flex;
+			align-items: center;
+		}
+		.hotel_t{
+			image{
+				width:90rpx;
+				height:90rpx;
+				background:rgba(238,238,238,1);
+			}
+		}
+		.hotel_c{
+			margin-left:10rpx;
+			.c_t{
+				text{
+					display: inline-block;
+					width:340rpx;
+					font-size:34rpx;
+					font-weight:500;
+					color:rgba(25,25,25,1);
+					line-height:48rpx;
+					white-space:nowrap; 
+					overflow:hidden;
+					text-overflow:ellipsis;
+				}
+			}
+			.c_b{
+				text{
+					font-size:26rpx;
+					color:rgba(153,153,153,1);
+					line-height:36rpx;
+				}
+			}
+		}
+		.hotel_b{
+			margin-left: 70rpx;
+			width:160rpx;
+			height:60rpx;
+			background:rgba(255,255,255,1);
+			border-radius:30rpx;
+			border:2rpx solid rgba(238,238,238,1);
+				text-align: center;
+			
+			text{
+				font-size:26rpx;
+				color:rgba(25,25,25,1);
+				line-height:62rpx;
+				
+			}
+		}
+	}
+	.hotel_detail{
+		view:nth-child(2){
+			width:750rpx;
+			height:544rpx;
+			background:rgba(238,238,238,1);
+		}
+	}

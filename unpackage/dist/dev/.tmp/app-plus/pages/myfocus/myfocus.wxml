@@ -1,0 +1,1 @@
+<view class="myfocus data-v-638808d2"><navbar vue-id="1" titleName="{{titleName}}" class="data-v-638808d2" bind:__l="__l"></navbar><sometab vue-id="2" sometab="{{sometab}}" class="data-v-638808d2" bind:__l="__l"></sometab><detail vue-id="3" list="{{detailList}}" class="data-v-638808d2" bind:__l="__l"></detail></view>

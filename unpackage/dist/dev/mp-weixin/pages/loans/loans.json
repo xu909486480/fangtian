@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-picker": "/wxcomponents/vant/dist/picker/index",
+    "van-popup": "/wxcomponents/vant/dist/popup/index",
+    "navbar": "/components/navbar/navbar"
+  }
+}

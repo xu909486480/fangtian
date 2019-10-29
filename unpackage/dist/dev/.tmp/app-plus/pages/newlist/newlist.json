@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "headnav": "/components/headnav/headnav",
+    "sort": "/components/sort/sort",
+    "alltab": "/components/alltab/alltab",
+    "detail": "/components/detail/detail"
+  }
+}

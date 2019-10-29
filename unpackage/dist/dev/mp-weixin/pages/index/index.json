@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "detail": "/components/detail/detail",
+    "alltab": "/components/alltab/alltab",
+    "swiper": "/components/swiper/swiper",
+    "grid": "/components/grid/grid"
+  }
+}

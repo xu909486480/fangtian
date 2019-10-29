@@ -1,0 +1,1 @@
+<view class="alltab data-v-fd0cb3dc"><block wx:for="{{alltab}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view data-event-opts="{{[['tap',[['allTab',[index]]]]]}}" class="{{['data-v-fd0cb3dc',(tabIndex==index)?'active':'']}}" bindtap="__e">{{''+item.text+''}}</view></block></view>
