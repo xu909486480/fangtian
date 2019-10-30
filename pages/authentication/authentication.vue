@@ -7,7 +7,7 @@
 				<text>完成实名认证，享受更多优质服务</text>
 			</view>
 			<view class="mian_inner">
-				<view class="inner_list" v-for="(item,index) in rzList" :key="index">
+				<view class="inner_list" v-for="(item,index) in rzList" :key="index" @tap="rzListTap(index)">
 					<image src="../../static/authentication_icon1.png" mode=""></image>
 					<text>{{item.text}}</text>
 				</view>
@@ -56,6 +56,17 @@
 				}else if(index==2){
 					uni.navigateTo({
 						url:'../openAccount/openAccount'
+					})
+				}
+			},
+			rzListTap(index){
+				if(index==0){
+					uni.navigateTo({
+						url:'../cardInfo/cardInfo' 
+					})
+				}else if(index==1){
+					uni.navigateTo({
+						url:'../certification/certification'
 					})
 				}
 			}

@@ -1,6 +1,6 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["components/navbar/navbar"],{
 
-/***/ 561:
+/***/ 601:
 /*!*************************************************************************************!*\
   !*** C:/Users/wjy/Desktop/wx/house/main.js?{"page":"components%2Fnavbar%2Fnavbar"} ***!
   \*************************************************************************************/
@@ -8,7 +8,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ 4);__webpack_require__(/*! @dcloudio/uni-stat */ 5);\n\nvar _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 3));\nvar _navbar = _interopRequireDefault(__webpack_require__(/*! ./components/navbar/navbar.vue */ 82));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}\ncreatePage(_navbar.default);\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ 1)[\"createPage\"]))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbbnVsbF0sIm5hbWVzIjpbImNyZWF0ZVBhZ2UiLCJQYWdlIl0sIm1hcHBpbmdzIjoia0RBQUEsd0NBQW1COztBQUVuQjtBQUNBLG9HO0FBQ0FBLFVBQVUsQ0FBQ0MsZUFBRCxDQUFWLEMiLCJmaWxlIjoiNTYxLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICd1bmktcGFnZXMnO2ltcG9ydCAnQGRjbG91ZGlvL3VuaS1zdGF0JztcblxuaW1wb3J0IFZ1ZSBmcm9tICd2dWUnICAgICAgICAgICAgXG5pbXBvcnQgUGFnZSBmcm9tICcuL2NvbXBvbmVudHMvbmF2YmFyL25hdmJhci52dWUnXG5jcmVhdGVQYWdlKFBhZ2UpIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///561\n");
+eval("/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ 4);__webpack_require__(/*! @dcloudio/uni-stat */ 5);\n\nvar _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 3));\nvar _navbar = _interopRequireDefault(__webpack_require__(/*! ./components/navbar/navbar.vue */ 82));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}\ncreatePage(_navbar.default);\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ 1)[\"createPage\"]))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbbnVsbF0sIm5hbWVzIjpbImNyZWF0ZVBhZ2UiLCJQYWdlIl0sIm1hcHBpbmdzIjoia0RBQUEsd0NBQW1COztBQUVuQjtBQUNBLG9HO0FBQ0FBLFVBQVUsQ0FBQ0MsZUFBRCxDQUFWLEMiLCJmaWxlIjoiNjAxLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICd1bmktcGFnZXMnO2ltcG9ydCAnQGRjbG91ZGlvL3VuaS1zdGF0JztcblxuaW1wb3J0IFZ1ZSBmcm9tICd2dWUnICAgICAgICAgICAgXG5pbXBvcnQgUGFnZSBmcm9tICcuL2NvbXBvbmVudHMvbmF2YmFyL25hdmJhci52dWUnXG5jcmVhdGVQYWdlKFBhZ2UpIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///601\n");
 
 /***/ }),
 
@@ -95,4 +95,4 @@ eval("// extracted by mini-css-extract-plugin//# sourceURL=[module]\n//# sourceM
 
 /***/ })
 
-},[[561,"common/runtime","common/vendor"]]]);
+},[[601,"common/runtime","common/vendor"]]]);

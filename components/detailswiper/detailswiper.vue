@@ -5,18 +5,9 @@
 				<image class='index-img' :src="item.url"></image>
 			</swiper-item>
 		</swiper>
-		<view class="newdetail_nav">
-			<view class="nav_left" @tap="backout">
-				<image src="../../static/newdetail_icon10.png"></image>
-			</view>
-			<view class="nav_right">
-				<image src="../../static/newdetail_icon11.png"></image>
-				<image src="../../static/newdetail_icon12.png"></image>
-			</view>
-		</view>
 		<view class="newdetail_model"> 
 			<text>样板房</text>
-			<text>户型图</text>
+			<text>户型图</text> 
 		</view>
 		<view class="newdetail_frame">
 			<text>1/15张</text>
@@ -34,11 +25,7 @@
 			}
 		},
 		methods:{
-			backout(){
-				uni.navigateBack({
-					
-				})
-			}
+			
 		}
 	}
 </script>
@@ -54,31 +41,7 @@
 			height:560rpx ;
 			background: #007AFF;
 		}
-		.newdetail_nav{
-			position: absolute;
-			width:750rpx;
-			box-sizing: border-box;
-			padding:0 32rpx;
-			top:88rpx;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			.nav_left{
-				image{
-					width:22rpx;
-					height:40rpx;
-				}
-			} 
-			.nav_right{
-				image{
-					width: 44rpx;
-					height: 44rpx;
-				}
-				image:nth-child(2){
-					margin-left:40rpx;
-				}
-			}
-		}
+		
 		.newdetail_model{
 			position: absolute;
 			left:256rpx;

@@ -83,7 +83,7 @@ eval("// extracted by mini-css-extract-plugin//# sourceURL=[module]\n//# sourceM
 
 /***/ }),
 
-/***/ 560:
+/***/ 600:
 /*!*********************************************************************************************!*\
   !*** C:/Users/wjy/Desktop/wx/house/main.js?{"page":"components%2FbillDetail%2FbillDetail"} ***!
   \*********************************************************************************************/
@@ -91,8 +91,8 @@ eval("// extracted by mini-css-extract-plugin//# sourceURL=[module]\n//# sourceM
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ 4);__webpack_require__(/*! @dcloudio/uni-stat */ 5);\n\nvar _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 3));\nvar _billDetail = _interopRequireDefault(__webpack_require__(/*! ./components/billDetail/billDetail.vue */ 471));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}\ncreatePage(_billDetail.default);\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ 1)[\"createPage\"]))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbbnVsbF0sIm5hbWVzIjpbImNyZWF0ZVBhZ2UiLCJQYWdlIl0sIm1hcHBpbmdzIjoia0RBQUEsd0NBQW1COztBQUVuQjtBQUNBLGlIO0FBQ0FBLFVBQVUsQ0FBQ0MsbUJBQUQsQ0FBVixDIiwiZmlsZSI6IjU2MC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAndW5pLXBhZ2VzJztpbXBvcnQgJ0BkY2xvdWRpby91bmktc3RhdCc7XG5cbmltcG9ydCBWdWUgZnJvbSAndnVlJyAgICAgICAgICAgIFxuaW1wb3J0IFBhZ2UgZnJvbSAnLi9jb21wb25lbnRzL2JpbGxEZXRhaWwvYmlsbERldGFpbC52dWUnXG5jcmVhdGVQYWdlKFBhZ2UpIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///560\n");
+eval("/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ 4);__webpack_require__(/*! @dcloudio/uni-stat */ 5);\n\nvar _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 3));\nvar _billDetail = _interopRequireDefault(__webpack_require__(/*! ./components/billDetail/billDetail.vue */ 471));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}\ncreatePage(_billDetail.default);\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ 1)[\"createPage\"]))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbbnVsbF0sIm5hbWVzIjpbImNyZWF0ZVBhZ2UiLCJQYWdlIl0sIm1hcHBpbmdzIjoia0RBQUEsd0NBQW1COztBQUVuQjtBQUNBLGlIO0FBQ0FBLFVBQVUsQ0FBQ0MsbUJBQUQsQ0FBVixDIiwiZmlsZSI6IjYwMC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAndW5pLXBhZ2VzJztpbXBvcnQgJ0BkY2xvdWRpby91bmktc3RhdCc7XG5cbmltcG9ydCBWdWUgZnJvbSAndnVlJyAgICAgICAgICAgIFxuaW1wb3J0IFBhZ2UgZnJvbSAnLi9jb21wb25lbnRzL2JpbGxEZXRhaWwvYmlsbERldGFpbC52dWUnXG5jcmVhdGVQYWdlKFBhZ2UpIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///600\n");
 
 /***/ })
 
-},[[560,"common/runtime","common/vendor"]]]);
+},[[600,"common/runtime","common/vendor"]]]);

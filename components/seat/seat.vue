@@ -10,7 +10,7 @@
 			</view>
 			<view class="page-body">
 				<view class="page-section page-section-gap">
-					<map style="width: 100%; height: 658rpx;" :latitude="latitude" :longitude="longitude" :markers="covers">
+					<map style="width: 100%; height: 658rpx;" :latitude="latitude" :longitude="longitude" :markers="markers">
 					</map>
 				</view>
 			</view>
@@ -49,7 +49,7 @@
 				title: 'map',
 				latitude: 24.482229,
 				longitude: 118.174654,
-				covers: [{
+				markers: [{
 					latitude: 24.482229,
 					longitude: 118.174654,
 					iconPath: '../../../static/location.png',
@@ -60,7 +60,7 @@
 		methods:{
 			mapList(index){
 				this.map = index
-			},
+			}, 
 			ambitus(){
 				uni.navigateTo({
 					url:'../../pages/building/building'

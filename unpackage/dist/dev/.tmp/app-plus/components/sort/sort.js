@@ -83,7 +83,7 @@ eval("// extracted by mini-css-extract-plugin//# sourceURL=[module]\n//# sourceM
 
 /***/ }),
 
-/***/ 572:
+/***/ 612:
 /*!*********************************************************************************!*\
   !*** C:/Users/wjy/Desktop/wx/house/main.js?{"page":"components%2Fsort%2Fsort"} ***!
   \*********************************************************************************/
@@ -91,8 +91,8 @@ eval("// extracted by mini-css-extract-plugin//# sourceURL=[module]\n//# sourceM
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ 4);__webpack_require__(/*! @dcloudio/uni-stat */ 5);\n\nvar _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 3));\nvar _sort = _interopRequireDefault(__webpack_require__(/*! ./components/sort/sort.vue */ 128));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}\ncreatePage(_sort.default);\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ 1)[\"createPage\"]))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbbnVsbF0sIm5hbWVzIjpbImNyZWF0ZVBhZ2UiLCJQYWdlIl0sIm1hcHBpbmdzIjoia0RBQUEsd0NBQW1COztBQUVuQjtBQUNBLCtGO0FBQ0FBLFVBQVUsQ0FBQ0MsYUFBRCxDQUFWLEMiLCJmaWxlIjoiNTcyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICd1bmktcGFnZXMnO2ltcG9ydCAnQGRjbG91ZGlvL3VuaS1zdGF0JztcblxuaW1wb3J0IFZ1ZSBmcm9tICd2dWUnICAgICAgICAgICAgXG5pbXBvcnQgUGFnZSBmcm9tICcuL2NvbXBvbmVudHMvc29ydC9zb3J0LnZ1ZSdcbmNyZWF0ZVBhZ2UoUGFnZSkiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///572\n");
+eval("/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ 4);__webpack_require__(/*! @dcloudio/uni-stat */ 5);\n\nvar _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 3));\nvar _sort = _interopRequireDefault(__webpack_require__(/*! ./components/sort/sort.vue */ 128));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}\ncreatePage(_sort.default);\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ 1)[\"createPage\"]))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbbnVsbF0sIm5hbWVzIjpbImNyZWF0ZVBhZ2UiLCJQYWdlIl0sIm1hcHBpbmdzIjoia0RBQUEsd0NBQW1COztBQUVuQjtBQUNBLCtGO0FBQ0FBLFVBQVUsQ0FBQ0MsYUFBRCxDQUFWLEMiLCJmaWxlIjoiNjEyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICd1bmktcGFnZXMnO2ltcG9ydCAnQGRjbG91ZGlvL3VuaS1zdGF0JztcblxuaW1wb3J0IFZ1ZSBmcm9tICd2dWUnICAgICAgICAgICAgXG5pbXBvcnQgUGFnZSBmcm9tICcuL2NvbXBvbmVudHMvc29ydC9zb3J0LnZ1ZSdcbmNyZWF0ZVBhZ2UoUGFnZSkiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///612\n");
 
 /***/ })
 
-},[[572,"common/runtime","common/vendor"]]]);
+},[[612,"common/runtime","common/vendor"]]]);

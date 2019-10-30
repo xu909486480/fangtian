@@ -295,6 +295,18 @@
 		{
 			"path": "pages/authentication/authentication"
 		},
+		// 银行卡信息
+		{
+			"path": "pages/cardInfo/cardInfo"
+		},
+		// 银行卡信息
+		{
+			"path": "pages/cardInformation/cardInformation"
+		},
+		// 实名认证
+		{
+			"path": "pages/certification/certification"
+		},
 		// 营业执照认证
 		{
 			"path": "pages/license/license"

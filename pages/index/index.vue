@@ -20,6 +20,7 @@
 		<swiper :swiper="swiper" 
 		:styleheight="styleheight" 
 		:swiperImgHeight="swiperImgHeight"
+		style="margin: 30rpx 0;"
 		></swiper>
 		
 		<!--首页  宫格-->
@@ -58,10 +59,10 @@
 		<alltab :alltab="alltab" :tabIndex="tabIndex" @tabTap="tabTap"></alltab>
 		
 		<!-- 首页  detail详情页-->
-		<block v-for="(item,index) in detail_list" :key="index" v-if="tabIndex == index">
+		<!-- <block v-for="(item,index) in detail_list" :key="index" v-if="tabIndex == index">
 			<detail :list="item" :index="index"></detail>
-		</block>
-		<!-- <detail :list="detail_list"></detail> -->
+		</block> -->
+		<detail :list="detail_list"></detail>
 	</view>
 </template>
 
@@ -79,58 +80,58 @@
 					{text: '二手房'},
 					{text: '租房'}
 				],
-				detail_list:[
-					{
-						list:[
-							{"img": "../../static/index_list1.png",
-							"line1": "11111111二小精装大三房的撒多撒多阿萨德",
-							"price": 111},
-							{"img": "../../static/index_list1.png",
-							"line1": "11111111南，南北通透的萨达萨达暗示的撒",
-							"price": 111}
-						]
-					},
-					{
-						list:[
-							{"img": "../../static/index_list1.png",
-							"line1": "2222222精装大三房的撒多撒多阿萨德",
-							"price": 222},
-							{"img": "../../static/index_list1.png",
-							"line1": "2222222，南北通透的萨达萨达暗示的撒",
-							"price": 222}
-						],
-					},
-					{
-						list:[
-							{"img": "../../static/index_list1.png",
-							"line1": "333松柏二小精装大三房的撒多撒多阿萨德",
-							"price": 333},
-							{"img": "../../static/index_list1.png",
-							"line1": "333阳台朝南，南北通透的萨达萨达暗示的撒",
-							"price": 333}
-						]
-					},
-					{
-						list:[
-							{"img": "../../static/index_list1.png",
-							"line1": "新出松柏二小精装大三房的撒多撒多阿萨德",
-							"price": 444},
-							{"img": "../../static/index_list1.png",
-							"line1": "厅带阳台朝南，南北通透的萨达萨达暗示的撒",
-							"price": 444}
-						]
-					}
-					],
+				// detail_list:[
+				// 	{
+				// 		list:[
+				// 			{"img": "../../static/index_list1.png",
+				// 			"line1": "11111111二小精装大三房的撒多撒多阿萨德",
+				// 			"price": 111},
+				// 			{"img": "../../static/index_list1.png",
+				// 			"line1": "11111111南，南北通透的萨达萨达暗示的撒",
+				// 			"price": 111}
+				// 		]
+				// 	},
+				// 	{
+				// 		list:[
+				// 			{"img": "../../static/index_list1.png",
+				// 			"line1": "2222222精装大三房的撒多撒多阿萨德",
+				// 			"price": 222},
+				// 			{"img": "../../static/index_list1.png",
+				// 			"line1": "2222222，南北通透的萨达萨达暗示的撒",
+				// 			"price": 222}
+				// 		],
+				// 	},
+				// 	{
+				// 		list:[
+				// 			{"img": "../../static/index_list1.png",
+				// 			"line1": "333松柏二小精装大三房的撒多撒多阿萨德",
+				// 			"price": 333},
+				// 			{"img": "../../static/index_list1.png",
+				// 			"line1": "333阳台朝南，南北通透的萨达萨达暗示的撒",
+				// 			"price": 333}
+				// 		]
+				// 	},
+				// 	{
+				// 		list:[
+				// 			{"img": "../../static/index_list1.png",
+				// 			"line1": "新出松柏二小精装大三房的撒多撒多阿萨德",
+				// 			"price": 444},
+				// 			{"img": "../../static/index_list1.png",
+				// 			"line1": "厅带阳台朝南，南北通透的萨达萨达暗示的撒",
+				// 			"price": 444}
+				// 		]
+				// 	}
+				// 	],
 
 				 
-				//  detail_list:[
-				// 	{"img": "../../static/index_list1.png",
-				// 	"line1": "新出松柏二小精装大三房的撒多撒多阿萨德",
-				// 	"price": 615},
-				// 	{"img": "../../static/index_list1.png",
-				// 	"line1": "厅带阳台朝南，南北通透的萨达萨达暗示的撒",
-				// 	"price": 720}
-				// ],
+				 detail_list:[
+					{"img": "../../static/index_list1.png",
+					"line1": "新出松柏二小精装大三房的撒多撒多阿萨德",
+					"price": 615},
+					{"img": "../../static/index_list1.png",
+					"line1": "厅带阳台朝南，南北通透的萨达萨达暗示的撒",
+					"price": 720}
+				],
 				styleheight:300,
 				swiperImgHeight:300,
 				swiper: [{img: "../../static/index_banner1.png"},

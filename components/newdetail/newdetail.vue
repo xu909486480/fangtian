@@ -1,5 +1,14 @@
 <template>
 	<view class="newdetail">
+		<view class="newdetail_nav">
+			<view class="nav_left" @tap="backout">
+				<image src="../../static/newdetail_icon10.png"></image>
+			</view>
+			<view class="nav_right">
+				<image src="../../static/newdetail_icon11.png"></image>
+				<image src="../../static/newdetail_icon12.png"></image>
+			</view>
+		</view>
 		<detailswiper :swiperlist="swiperlist"></detailswiper>
 		
 		<view class="newdetail_inner">
@@ -328,11 +337,16 @@
 			aaa(){
 				this.guanzhu='已关注'	
 				this.img='../../static/newdetail_icon7_active.png'
+			},
+			backout(){
+				uni.navigateBack({
+					
+				})
 			}
 		}
 	}
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="scss"> 
 	@import '../../common/style/newdetail.scss'
 </style>
