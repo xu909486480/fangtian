@@ -51,12 +51,12 @@
 			  @close="onClose"
 			>
 			<!-- 时间表 -->
+				  <!-- @input="onInput" -->
 				<van-datetime-picker
 				  :type="datetime"
 				  :value=" currentDate "
 				  :min-date=" minDate "
 				  :max-date=" maxDate "
-				  @input="onInput"
 				  title="选择时间"
 				></van-datetime-picker>
 			</van-popup>
@@ -94,6 +94,9 @@
 				show: false
 			}
 		},
+		onLoad() {
+			this.orderTableApi()
+		},
 		methods: {
 			aaa(){
 				this.visible = true
@@ -101,12 +104,31 @@
 			showPopup() {
 				console.log('显示')
 			    this.show = true;
-			  },
+			},
 			
-			  onClose() {
-				  console.log('隐藏')
+			onClose() {
+				console.log('隐藏')
 			    this.show = false;
-			  }
+			},
+			
+			orderTableApi(){
+				uni.request({
+					url:'http://192.168.0.102:9595/api_fang/house/appointment',
+					method:'POST',
+					data:{
+						release_token:'a',
+						house_id:'1',
+						type:'2',
+						name:'许愿',
+						phone:'15160463368',
+						appointment_time:'2000.12.12',
+						remark:'饿明明木木木'
+					},
+					success(res) {
+						console.log(res)
+					}
+				})
+			}
 
 		}
 	}

@@ -1,2 +1,2 @@
-setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"swiper.",[1],"data-v-075ff592 { text-align: center; height: ",[0,260],"; }\n",],undefined,{path:"./components/swiper/swiper.wxss"})();
+setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"swiper.",[1],"data-v-075ff592 { text-align: center; height: ",[0,260],"; }\n.",[1],"swiper .",[1],"swiper-item wx-image.",[1],"data-v-075ff592 { border-radius: ",[0,20],"; }\n",],undefined,{path:"./components/swiper/swiper.wxss"})();
 document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./components/swiper/swiper.wxml') } }));

@@ -28,6 +28,9 @@
   text-align: center;
   height: 260rpx;
 }
+.swiper .swiper-item image.data-v-075ff592 {
+    border-radius: 20rpx;
+}
 
 @charset "UTF-8";
 /**

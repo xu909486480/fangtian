@@ -8,6 +8,7 @@
     "pages/setcode/setcode",
     "pages/login/login",
     "pages/findcode/findcode",
+    "pages/address/address",
     "pages/bridal/bridal",
     "pages/newlist/newlist",
     "pages/renting/renting",

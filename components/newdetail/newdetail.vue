@@ -9,15 +9,16 @@
 				<image src="../../static/newdetail_icon12.png"></image>
 			</view>
 		</view>
-		<detailswiper :swiperlist="swiperlist"></detailswiper>
+		<detailswiper :swiperList="inner.imgs"></detailswiper>
 		
 		<view class="newdetail_inner">
 			<view class="detail_h3">
-				<text>住宅·莲花国际</text>
+				<text>{{inner.title}}</text>
 			</view>
 			<view class="detail_msg">
-				<text>品牌房企</text>
-				<text>交通便利</text>
+				<block v-for="(tese,index) in inner.tese" :key="index">
+					<text>{{tese}}</text>
+				</block>
 			</view>
 			<view class="detail_price">
 				<view>
@@ -25,11 +26,11 @@
 					<view>参考均价</view>
 				</view>
 				<view>
-					<view>360<text>万/套</text></view>
+					<view>{{inner.total_price}}<text>万/套</text></view>
 					<view>参考均价</view>
 				</view>
 				<view>
-					<view>住宅<text></text></view>
+					<view>{{inner.purpose}}<text></text></view>
 					<view>参考均价</view>
 				</view>
 			</view>
@@ -39,7 +40,7 @@
 			<view class="detail_list">
 				<view>
 					<view>
-						开盘时间：<text>2016/05/01</text>
+						开盘时间：<text>{{inner.create_time}}</text>
 					</view>
 					<view>
 						交房时间：<text>2016/05/01</text>
@@ -53,13 +54,13 @@
 				</view>
 				<view>
 					<view>
-						建筑面积：<text>100-130m²</text>
+						建筑面积：<text>{{inner.mianji}}m²</text>
 					</view>
 					<view>
-						装修标准：<text>精装修</text>
+						装修标准：<text>{{inner.zhuangxiu}}</text>
 					</view>
 					<view>
-						产权年限：<text>70年</text>
+						产权年限：<text>{{inner.property_years}}</text>
 					</view>
 					<view>
 						容积率：<text>80%</text>
@@ -68,10 +69,10 @@
 			</view>
 			<view class="detail_site">
 				<view>
-					建筑类型：<text>板房、踏板结合</text>
+					建筑类型：<text>{{inner.house_type}}</text>
 				</view>
 				<view>
-					楼盘地址：<text>集美龙亭六里一号，龙亭六里七号</text>
+					楼盘地址：<text>{{inner.address}}</text>
 					<image src="../../static/newdetail_icon1.png"></image>
 				</view>
 			</view>
@@ -264,17 +265,17 @@
 			return {
 				guanzhu:'关注',
 				img:'../../static/newdetail_icon7.png',
-				swiperlist: [{
-					url: ""
-				}, {
-					url: "../../static/index_banner1.png"
-				}, {
-					url: ""
-				}, {
-					url: "../../static/index_banner1.png"
-				}],
+				swiperList: [],
+				inner:{},
 				referList:[{text:'向华强'},{text:'向华强'}]
 			}
+		},
+		onLoad(options) {
+			 const data = JSON.parse(decodeURIComponent(options.data));
+			 this.inner = data
+		},
+		mounted() {
+			console.log(this.inner)
 		},
 		methods: {
 			mapList(e){

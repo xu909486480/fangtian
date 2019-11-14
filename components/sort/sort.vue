@@ -9,7 +9,7 @@
 			</view>
 		</view>
 		<!-- <view class="sort_position"> -->
-			<view class="sort_tab" v-if="tab == 0">
+			<view class="sort_tab" v-show="tab == 0">
 				<view class="tab_all">
 					<view class="tab_l">
 						<text>不限</text>
@@ -21,19 +21,22 @@
 					<view class="tab_r">
 						<view class="r_list">
 							<text>不限</text>
-							<image src="" mode=""></image>						
+							<radio value="" />		
 						</view>
 						<view class="r_list">
 							<text>不限</text>
-							<image src="" mode=""></image>						
+							<radio value="" />
+							<!-- <image src="" mode=""></image>						 -->
 						</view>
 						<view class="r_list">
 							<text>不限</text>
-							<image src="" mode=""></image>						
+							<radio value="" />
+							<!-- <image src="" mode=""></image>						 -->
 						</view>
 						<view class="r_list">
 							<text>不限</text>
-							<image src="" mode=""></image>						
+							<radio value="" />
+							<!-- <image src="" mode=""></image>						 -->
 						</view>
 					</view>
 				</view>
@@ -43,7 +46,7 @@
 				</view>
 			</view>
 			
-			<view class="sort_tab" v-if="tab == 1">
+			<view class="sort_tab" v-show="tab == 1">
 				<view class="tab_all">
 					<view class="tab_l">
 						<text>总价</text>
@@ -69,17 +72,18 @@
 				</view>
 			</view>
 			
-			<view class="unit" v-if="tab == 2">
+			<view class="unit" v-show="tab == 2">
 				<view class="unit_list">
 					<text>不限</text>
-					<image src="" mode=""></image>
+					<!-- <image src="" mode=""></image> -->
+					<radio value="" />
 				</view>
 				<view class="price_btn">
 					<text>确定</text>
 				</view>
 			</view>
 			
-			<view class="screen" v-if="tab == 3">
+			<view class="screen" v-show="tab == 3">
 				<view class="screen_list">
 					<view class="list_txt">
 						<text>面积/㎡</text> 
@@ -101,7 +105,7 @@
 				</view>
 			</view>
 			
-			<view class="" v-if="tab == 4">
+			<view class="" v-show="tab == 4">
 				默认排序
 			</view>
 		<!-- </view> -->
@@ -194,10 +198,9 @@
 									padding: 20rpx 0;
 								text{
 								}
-								image{
+								radio{
 									width: 36rpx;
 									height: 36rpx;
-									background: #DD524D;
 								}
 							}
 							
@@ -261,10 +264,9 @@
 				color:rgba(25,25,25,1);
 				line-height:48rpx;
 			}
-			image{
+			radio{
 				width: 34rpx;
 				height: 34rpx;
-				background: #F76260;
 			}
 		}
 		.price_btn{

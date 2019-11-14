@@ -8,6 +8,7 @@
     "pages/setcode/setcode",
     "pages/login/login",
     "pages/findcode/findcode",
+    "pages/address/address",
     "pages/bridal/bridal",
     "pages/newlist/newlist",
     "pages/renting/renting",
@@ -49,6 +50,12 @@
     "pages/monbill/monbill",
     "pages/member/member",
     "pages/authentication/authentication",
+    "pages/cardInfo/cardInfo",
+    "pages/cardInformation/cardInformation",
+    "pages/certification/certification",
+    "pages/license/license",
+    "pages/licensePeople/licensePeople",
+    "pages/openAccount/openAccount",
     "pages/agentdetail/agentdetail",
     "pages/personal/personal",
     "pages/personalData/personalData",
@@ -108,6 +115,11 @@
       }
     ]
   },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
   "usingComponents": {},
-  "sitemapLocation": "sitemap13.json"
+  "sitemapLocation": "sitemap92.json"
 }

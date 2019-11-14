@@ -202,82 +202,32 @@ __webpack_require__.r(__webpack_exports__);
 var _detail = _interopRequireDefault(__webpack_require__(/*! ../../components/detail/detail.vue */ 21));
 var _swiper = _interopRequireDefault(__webpack_require__(/*! ../../components/swiper/swiper.vue */ 28));
 var _alltab = _interopRequireDefault(__webpack_require__(/*! ../../components/alltab/alltab.vue */ 35));
-var _grid = _interopRequireDefault(__webpack_require__(/*! ../../components/grid/grid.vue */ 42));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default = { components: { detail: _detail.default, alltab: _alltab.default, swiper: _swiper.default, grid: _grid.default }, data: function data() {return { tabIndex: 0, alltab: [{ text: '新房' }, { text: '二手房' }, { text: '租房' }], detail_list: [{ list: [{ "img": "../../static/index_list1.png", "line1": "11111111二小精装大三房的撒多撒多阿萨德", "price": 111 }, { "img": "../../static/index_list1.png", "line1": "11111111南，南北通透的萨达萨达暗示的撒", "price": 111 }] }, { list: [{ "img": "../../static/index_list1.png", "line1": "2222222精装大三房的撒多撒多阿萨德", "price": 222 }, { "img": "../../static/index_list1.png", "line1": "2222222，南北通透的萨达萨达暗示的撒", "price": 222 }] }, { list: [{ "img": "../../static/index_list1.png", "line1": "333松柏二小精装大三房的撒多撒多阿萨德", "price": 333 }, { "img": "../../static/index_list1.png", "line1": "333阳台朝南，南北通透的萨达萨达暗示的撒", "price": 333 }] }, { list: [{ "img": "../../static/index_list1.png", "line1": "新出松柏二小精装大三房的撒多撒多阿萨德", "price": 444 }, { "img": "../../static/index_list1.png", "line1": "厅带阳台朝南，南北通透的萨达萨达暗示的撒", "price": 444 }] }], //  detail_list:[
-      // 	{"img": "../../static/index_list1.png",
-      // 	"line1": "新出松柏二小精装大三房的撒多撒多阿萨德",
-      // 	"price": 615},
-      // 	{"img": "../../static/index_list1.png",
-      // 	"line1": "厅带阳台朝南，南北通透的萨达萨达暗示的撒",
-      // 	"price": 720}
-      // ],
-      styleheight: 300, swiperImgHeight: 300, swiper: [{ img: "../../static/index_banner1.png" }, { img: "../../static/index_banner1.png" }, { img: "../../static/index_banner1.png" }, { img: "../../static/index_banner1.png" }], grid: [{ img: "../../static/index_icon4.png", "text": "新房" }, { img: "../../static/index_icon5.png", "text": "二手房" }, { img: "../../static/index_icon6.png",
+var _grid = _interopRequireDefault(__webpack_require__(/*! ../../components/grid/grid.vue */ 42));
+var _axios = _interopRequireDefault(__webpack_require__(/*! ../../common/utils/axios.js */ 640));var _components$data$onLa;function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default = (_components$data$onLa = {
+
+  components: { detail: _detail.default, alltab: _alltab.default, swiper: _swiper.default, grid: _grid.default },
+  data: function data() {
+    return {
+      swiperList: [],
+      detail_list: [],
+      realApi: {},
+      cityName: '',
+      cityCode: '',
+      tabIndex: 0,
+      alltab: [
+      { text: '二手房' },
+      { text: '租房' }],
+
+      styleheight: 300,
+      swiperImgHeight: 300,
+      grid: [{
+        img: "../../static/index_icon4.png",
+        "text": "新房" },
+      {
+        img: "../../static/index_icon5.png",
+        "text": "二手房" },
+      {
+        img: "../../static/index_icon6.png",
         "text": "租房" },
       {
         img: "../../static/index_icon7.png",
@@ -305,58 +255,248 @@ var _default = { components: { detail: _detail.default, alltab: _alltab.default,
       gridImgHeight: 52 };
 
   },
-  onLoad: function onLoad() {
+  onLaunch: function onLaunch() {
+  },
+  onReady: function onReady() {
+
+    this.getCityNameApi();
+  },
+  onLoad: function onLoad(options) {
+    this.getSwiperApi();
+    try {
+      var data = uni.getStorageSync('cityCode');
+      if (data) {
+        this.cityName = data.name;
+        this.cityCode = data.code;
+        this.getDetailApi();
+        this.getrealtimeApi();
+        console.log('有缓存，直接读取');
+      } else {
+        console.log('第一次进入');
+        // let that = this;
+
+        this.getDetailApi();
+        this.getrealtimeApi();
+      }
+    } catch (e) {
+    }
+
+
+
+
+
+
+
+
+
+    // let that = this;
+    // try{
+    // 	const res = uni.getStorageSync('cityCode');
+    // 	if(res){
+    // 		that.cityName = res.name
+    // 		that.cityCode = res.code
+    // this.getDetailApi()
+    // this.getrealtimeApi()
+    // 		console.log('第一次进入')
+    // 	}else{
+    // 		console.log('第一次进入失败')
+    // 		console.log(res)
+    // 	}
+    // }catch(e){
+    // }
+
+
+
+
+
+
+
+    // key:'cityCode',
+    // success(res) {
+    // 	that.cityName = res.data.name
+    // 	that.cityCode = res.data.code
+    // 	console.log(that.cityName,that.cityCode)
+    // }
+
+  },
+  created: function created() {
+  },
+  mounted: function mounted() {
 
   },
   methods: {
     //首页搜索框  跳转到搜索页
     homeSearch: function homeSearch() {
       uni.navigateTo({
-        url: '../monbill/monbill' });
+        url: '../../components/search/search' });
 
     },
+    // 获取城市名称 
+    getCityNameApi: function getCityNameApi() {
+      var that = this;
+      uni.request({
+        url: 'http://shop_api.fang-tian.com/api_fang/house/getCityName',
+        method: 'POST',
+        success: function success(res) {
+          var cityName = res.data.data.cityName;
+          var cityCode = res.data.data.cityCode;
+          uni.setStorage({
+            key: 'cityCode',
+            data: { code: cityCode, name: cityName } });
+
+          console.log('第一次存储信息');
+
+
+          // try {
+          //     uni.setStorageSync('cityCode', {code:cityCode,name:cityName});
+          // } catch (e) {
+          //     // error
+          // }
+          // uni.setStorage({
+          // 	key:'cityCode',
+          // 	data:{code:cityCode,name:cityName}
+          // })
+          // console.log('城市名称',res.data.data.cityCode,res.data.data.cityName)
+        } });
+
+    },
+
+    // uni.getLocation({
+    //     type: 'wgs84',
+    // 	altitude:true,
+    //     success: function (res) {
+    // console.log(res);  //拿不到地址
+    //     }
+    // });
+
     // 公共组件alltab的数据  $emit
     tabTap: function tabTap(index) {
       this.tabIndex = index;
-
-    },
-    gridList: function gridList(index) {
-      console.log(1111);
       if (index == 0) {
-        uni.navigateTo({
-          url: '../bridal/bridal' });
+        var that = this;
+        console.log('点击二手房', this.cityCode);
+        uni.request({
+          url: 'http://shop_api.fang-tian.com/api_fang/house/secondHouseRecommend',
+          method: 'POST',
+          data: { city_id: this.cityCode },
+          success: function success(res) {
+            that.detail_list = res.data.data.data;
+            console.log('二手房api');
+          } });
 
       } else if (index == 1) {
-        uni.navigateTo({
-          url: '../secondhand/secondhand' });
-
-      } else if (index == 2) {
-        uni.navigateTo({
-          url: '../renting/renting' });
-
-      } else if (index == 3) {
-        uni.navigateTo({
-          url: '../ovistore/ovistore' });
-
-      } else if (index == 4) {
-        uni.navigateTo({
-          url: '../offices/offices' });
-
-      } else if (index == 5) {
-        uni.navigateTo({
-          url: '../agent/agent' });
-
-      } else if (index == 6) {
-        uni.navigateTo({
-          url: '../issue/issue' });
-
-      } else if (index == 7) {
-        uni.navigateTo({
-          url: '../loans/loans' });
+        var that = this;
+        console.log('点击租房', this.cityCode);
+        uni.request({
+          url: 'http://shop_api.fang-tian.com/api_fang/house/rentalHouseRecommend',
+          method: 'POST',
+          data: { city_id: this.cityCode },
+          success: function success(res) {
+            that.detail_list = res.data.data.data;
+            console.log('租房api');
+          } });
 
       }
+    },
+    // 宫格的索引跳转
+    gridList: function gridList(index) {
+      switch (index) {
+        case 0:
+          // var cityCode = this.cityCode;
+          uni.navigateTo({
+            // url:'../bridal/bridal'+ `?id=${cityCode}`
+            url: '../bridal/bridal' });
 
-    } } };exports.default = _default;
+          break;
+        case 1:
+          uni.navigateTo({
+            url: '../secondhand/secondhand' });
+
+          break;
+        case 2:
+          uni.navigateTo({
+            url: '../renting/renting' });
+
+          break;
+        case 3:
+          uni.navigateTo({
+            url: '../ovistore/ovistore' });
+
+          break;
+        case 4:
+          uni.navigateTo({
+            url: '../offices/offices' });
+
+          break;
+        case 5:
+          uni.navigateTo({
+            url: '../agent/agent' });
+
+          break;
+        case 6:
+          uni.navigateTo({
+            url: '../assess/assess' });
+
+          break;
+        case 7:
+          uni.navigateTo({
+            url: '../loans/loans' });
+
+          break;}
+
+    },
+    // 获取轮播图Api数据
+    getSwiperApi: function getSwiperApi() {
+      var that = this;
+      uni.request({
+        url: 'http://shop_api.fang-tian.com/api_fang/house/bannerList',
+        method: 'POST',
+        data: { seat: '1' },
+        success: function success(res) {
+          that.swiperList = res.data.data;
+        } });
+
+    },
+
+    // 跳转到选择城市页
+    cityTap: function cityTap() {
+      uni.navigateTo({
+        url: '../address/address' });
+
+    },
+    // 二手房推荐API
+    getDetailApi: function getDetailApi() {
+      var that = this;
+      uni.request({
+        url: 'http://shop_api.fang-tian.com/api_fang/house/secondHouseRecommend',
+        method: 'POST',
+        data: { city_id: this.cityCode },
+        success: function success(res) {
+          that.detail_list = res.data.data.data;
+          // console.log(res.data.data)
+        } });
+
+
+    },
+    // 实时房价API
+    getrealtimeApi: function getrealtimeApi() {
+      var that = this;
+      uni.request({
+        url: 'http://shop_api.fang-tian.com/api_fang/house/realtime',
+        method: 'POST',
+        data: { city: this.cityCode },
+        success: function success(res) {
+          that.realApi = res.data.data;
+        } });
+
+    } } }, _defineProperty(_components$data$onLa, "created", function created()
+
+{
+
+}), _defineProperty(_components$data$onLa, "mounted", function mounted()
+{
+
+}), _components$data$onLa);exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
@@ -492,26 +632,58 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   props: {
-    // list:{
-    // 	type:[Object,Array],
-    // 	default:['list']
-    // },
     list: [Object, Array],
-    index: Number },
+    listIndex: Number },
 
   data: function data() {
     return {};
 
-
   },
   methods: {
-    detailList: function detailList() {
-      uni.navigateTo({
-        url: '../../components/newdetail/newdetail' });
+    detailList: function detailList(index) {
+      var Id = this.list[index].Id;
+      var listIndex = this.listIndex;
+      console.log(Id);
+      if (listIndex == 0) {
+        // 二手房详情
+        uni.request({
+          url: 'http://shop_api.fang-tian.com/api_fang/house/secondHouseDetail',
+          method: 'POST',
+          data: { house_id: Id },
+          success: function success(res) {
+            var data = res.data.data;
+            uni.navigateTo({
+              url: '../../pages/secondhanddetail/secondhanddetail' + "?data=".concat(encodeURIComponent(JSON.stringify(data))) + "&id=".concat(listIndex) });
 
+          } });
+
+      } else if (listIndex == 1) {
+        // 租房详情
+        uni.request({
+          url: 'http://192.168.0.102:9595/api_fang/house/rentalDetail',
+          method: 'POST',
+          data: { house_id: Id },
+          success: function success(res) {
+            var data = res.data.data;
+            uni.navigateTo({
+              url: '../../pages/joinhouse/joinhouse' + "?data=".concat(encodeURIComponent(JSON.stringify(data))) + "&id=".concat(listIndex) });
+
+          } });
+
+      }
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
@@ -659,7 +831,7 @@ var _default =
 {
   name: 'swiper',
   props: {
-    swiper: ['swiper'],
+    swiper: Array,
     styleheight: {
       type: Number,
       default: 240 },

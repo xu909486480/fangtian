@@ -93,6 +93,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 var _navbar = _interopRequireDefault(__webpack_require__(/*! ../../components/navbar/navbar.vue */ 81));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //
 //
 //
@@ -120,7 +132,32 @@ var _navbar = _interopRequireDefault(__webpack_require__(/*! ../../components/na
 //
 //
 //
-var _default = { components: { navbar: _navbar.default }, data: function data() {return { titleName: '登录' };}, methods: { forget: function forget() {uni.navigateTo({ url: '../findcode/findcode' });} } };exports.default = _default;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = { components: { navbar: _navbar.default }, data: function data() {return { titleName: '登录', username: '', password: '', istext: false, //是否提示错误
+      textMsg: '' //错误显示
+    };}, methods: { // 跳转忘记密码页
+    forget: function forget() {uni.navigateTo({ url: '../findcode/findcode' });}, // 点击登录
+    loginTap: function loginTap() {var _this = this;uni.request({ url: 'http://192.168.0.101:802/api/user/login', method: 'POST', data: { mobile: this.username, password: this.password }, success: function success(res) {var data = res.data;if (data.code == 0) {_this.istext = true;_this.textMsg = res.data.msg;} else if (data.code == 1) {console.log('登录成功，跳转到登录成功user页', data.data);uni.switchTab({ url: '../my/my' });}} });}, // 是否获焦
+    isfocus: function isfocus() {
+      this.istext = false;
+    },
+    // 跳转到注册页
+    regTap: function regTap() {
+      uni.navigateTo({
+        url: '../reg/reg' });
+
+    } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
@@ -278,6 +315,10 @@ var _default =
       default: '' },
 
     share: {
+      type: String,
+      default: '' },
+
+    bg: {
       type: String,
       default: '' } },
 

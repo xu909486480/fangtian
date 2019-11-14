@@ -175,10 +175,9 @@
           border-bottom: 2rpx solid #F5F5F5;
           padding: 20rpx 0;
 }
-.sort .sort_tab .tab_all .tab_r .r_list image.data-v-70a126dc {
+.sort .sort_tab .tab_all .tab_r .r_list radio.data-v-70a126dc {
             width: 36rpx;
             height: 36rpx;
-            background: #DD524D;
 }
 .sort .sort_tab .sort_btn.data-v-70a126dc {
       position: absolute;
@@ -255,10 +254,9 @@
       color: #191919;
       line-height: 48rpx;
 }
-.unit .unit_list image.data-v-70a126dc {
+.unit .unit_list radio.data-v-70a126dc {
       width: 34rpx;
       height: 34rpx;
-      background: #F76260;
 }
 .unit .price_btn.data-v-70a126dc {
     position: absolute;

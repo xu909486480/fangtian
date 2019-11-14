@@ -1,7 +1,7 @@
 <template>
 	<view class="bridal">
 		<view class="bridal_head">
-			<view class="head_back">
+			<view class="head_back" @tap="goBack">
 				<image src="../../static/bridal_icon1.png"></image>
 			</view>
 			<view class="head_search">
@@ -20,7 +20,7 @@
 		<!-- 宫格 -->
 		<grid :grid="grid"></grid>
 		<!-- 轮播图 -->
-		<swiper :swiper="swiper"></swiper>
+		<swiper :swiper="swiperList"></swiper>
 		<!-- 少数tab组件 -->
 		<sometab :sometab="tab_list"></sometab>
 		<!-- 详情页 -->
@@ -70,13 +70,7 @@
 					{text: '优惠楼盘'},
 					{text: '近期开盘'}
 				],
-				swiper: [{
-					img: '../../static/shop_banner.png'
-				}, {
-					img: '../../static/shop_banner.png'
-				}, {
-					img: '../../static/shop_banner.png'
-				}],
+				swiperList: [],
 				grid: [{
 						img: '../../static/bridal_icon2.png',
 						text: '全部楼盘'
@@ -100,6 +94,10 @@
 				]
 			}
 		},
+		onLoad(options) {
+			console.log(options.id)
+			this.getSwiperApi()
+		},
 		methods: {
 			tabList(index){
 				this.tab = index
@@ -108,12 +106,31 @@
 			aaa() {
 
 			},
+			// 后退
+			goBack(){
+				uni.navigateBack({
+					
+				})
+			},
 			newList(){
 				uni.navigateTo({
 					url:'../newlist/newlist'
 				})
+			},
+			// 轮播图
+			getSwiperApi(){
+				var that = this;
+				uni.request({
+					url:'http://192.168.0.102:9595/api_fang/house/bannerList',
+					method:'POST',
+					data:{seat:'6'}, //新房
+					success(res){
+						that.swiperList = res.data.data
+					}
+				})
 			}
-		}
+		},
+		
 	}
 </script>
 

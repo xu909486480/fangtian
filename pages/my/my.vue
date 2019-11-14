@@ -47,12 +47,6 @@
 					<image src="../../static/user_icon4.png"></image>
 				</view>
 			</view>
-			<!-- <view class="index_grid">
-				<view class="grid_index" v-for="(item,index) in list" :key="index">
-					<image :src="item.img"></image>
-					<view>{{item.text}}</view>
-				</view>
-			</view> -->
 			<grid :grid="grid"
 			:gridImgWidth="gridImgWidth"
 			:gridImgHeight="gridImgHeight"
@@ -68,37 +62,11 @@
 				<!-- <view class="user_manage"> -->
 				<view class="user_broker">
 					<text class="borker_inner">我是经纪人</text>
-					<!-- <scroll-view scroll-x class="myshop">
-						<view class="myshop_item" v-for="(item,index) in borker" :key="index">
-							<image :src="item.img"></image>
-							<view>{{item.text}}</view>
-						</view>
-					</scroll-view> -->
 					<grid :grid="grid1"
 					:gridImgWidth="gridImgWidth"
 					:gridImgHeight="gridImgHeight"
 					></grid>
 				</view>
-				<!--我的  登录成功显示-->
-				<!-- <view class="user_door">
-					<text class="borker_inner">门店管理</text>
-					<scroll-view scroll-x class="myshop">
-						<view class="myshop_item" v-for="(item,index) in door" :key="index">
-							<image :src="item.img"></image>
-							<view>{{item.text}}</view>
-						</view>
-					</scroll-view>
-				</view> -->
-				<!--我的  登录成功显示-->
-				<!-- <view class="user_master">
-					<text class="borker_inner">我是店主</text>
-					<scroll-view scroll-x class="myshop">
-						<view class="myshop_item" v-for="(item,index) in master" :key="index">
-							<image :src="item.img"></image>
-							<view>{{item.text}}</view>
-						</view>
-					</scroll-view>
-				</view> -->
 			</view>
 		</view>
 	</view>
@@ -108,7 +76,7 @@
 	import grid from '../../components/grid/grid.vue'
 	export default {
 		components:{grid},
-		data() {
+		data() { 
 			return {
 				gridImgWidth:48,
 				gridImgHeight:48,
@@ -179,13 +147,13 @@
 			}
 		},
 		methods: {
+			// 跳转到登录页面
 			login_user() {
-				// uni.navigateTo({
-				// 	url:'../login/login'
-				// })
-				this.login_state = false //有token为true
-				console.log(111)
+				uni.navigateTo({
+					url:'../login/login'
+				})
 			},
+			// 跳转到注册页面
 			reg_user(){
 				uni.navigateTo({
 					url:'../reg/reg'

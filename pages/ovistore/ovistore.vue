@@ -8,7 +8,7 @@
 		@gridList="gridList"
 		></grid>
 		<!-- 轮播图 -->
-		<swiper :swiper="swiper"></swiper>
+		<swiper :swiper="swiperList"></swiper>
 		<view class="tab">
 			<view @tap="tabList(index)" v-for="(item,index) in tab_list" :key="index" :class="[tab==index?'active':'']">
 				{{item.text}}
@@ -46,10 +46,11 @@
 					"price": 720
 				}],
 				tab_list:[{text:'租商铺'},{text:'买商铺'}],
-				swiper: [{img: '../../static/shop_banner.png'},
-						{img: '../../static/shop_banner.png'}, 
-						{img: '../../static/shop_banner.png'}],	
+				swiperList: [],	
 			}
+		},
+		onLoad() {
+			this.getSwiperApi()
 		},
 		methods:{
 			homeSearch(){
@@ -60,6 +61,18 @@
 			tabList(index){
 				this.tab = index
 			},
+			//轮播图
+			getSwiperApi(){
+				var that = this;
+				uni.request({
+					url:'http://192.168.0.102:9595/api_fang/house/bannerList',
+					method:'POST',
+					data:{seat:'5'}, //商铺
+					success(res){
+						that.swiperList = res.data.data
+					}
+				})
+			}
 		}
 	
 }

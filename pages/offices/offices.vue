@@ -1,7 +1,7 @@
 <template>
 	<view class="ovistore">
 		<navbar :titleName="titleName" :share="share"></navbar>
-		<swiper :swiper="swiper" style="margin-top: 30rpx;"></swiper>
+		<swiper :swiper="swiperList" style="margin-top: 30rpx;"></swiper>
 		<sometab :sometab="tab_list"></sometab>
 		<detail :list="detail_list"></detail>
 	</view>
@@ -16,6 +16,7 @@
 		components:{navbar,swiper,sometab,detail},
 		data() {
 			return {
+				detail_list: [],
 				titleName:'写字楼',
 				tab:0,
 				share:'../../static/newdetail_icon6.png',
@@ -23,21 +24,13 @@
 					{img: '../../static/bridal_icon2.png',text: '商铺出租'},
 					{img: '../../static/bridal_icon2.png',text: '生意装让'},
 					{img: '../../static/bridal_icon2.png',text: '其他'}],
-				detail_list: [{
-					"img": "../../static/index_list1.png",
-					"line1": "新出松柏二小精装大三房的撒多撒多阿萨德",
-					"price": 615
-				},
-				{
-					"img": "../../static/index_list1.png",
-					"line1": "厅带阳台朝南，南北通透的萨达萨达暗示的撒",
-					"price": 720
-				}],
-				tab_list:[{text:'租商铺'},{text:'买商铺'}],
-				swiper: [{img: '../../static/shop_banner.png'},
-						{img: '../../static/shop_banner.png'}, 
-						{img: '../../static/shop_banner.png'}],	
+				tab_list:[{text:'租写字楼'},{text:'买写字楼'}],
+				swiperList: [],	
 			}
+		},
+		onLoad() {
+			this.getSwiperApi()
+			this.getDetailApi()
 		},
 		methods:{
 			homeSearch(){
@@ -46,10 +39,34 @@
 				})
 			},
 			tabList(index){
-				this.tab = index
+				this.tab = index;
 			},
+			//轮播图
+			getSwiperApi(){
+				var that = this;
+				uni.request({
+					url:'http://shop_api.fang-tian.com/api_fang/house/bannerList',
+					method:'POST',
+					data:{seat:'4'}, //写字楼
+					success(res){
+						that.swiperList = res.data.data
+					}
+				})
+			},
+			// 写字楼推荐API
+			getDetailApi(){
+				var that = this;
+				uni.request({
+					url:'http://shop_api.fang-tian.com/api_fang/House/officeHouseRecommend',
+					method:'POST',
+					data:{city:'350200'}, 
+					success(res){
+						// that.detail_list = res.data.data.data
+						console.log(res)
+					}
+				})
+			}
 		}
-	
 }
 </script>
 

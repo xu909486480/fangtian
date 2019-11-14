@@ -122,7 +122,29 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -177,7 +199,61 @@ var _navbar = _interopRequireDefault(__webpack_require__(/*! ../../components/na
 //
 //
 //
-var _default = { components: { navbar: _navbar.default }, data: function data() {return { titleName: '注册' };}, methods: {} };exports.default = _default;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = { components: { navbar: _navbar.default }, data: function data() {return { titleName: '注册', username: '', //手机号
+      code: '', //验证码
+      rec_phone: '', //推荐人手机号
+      textMsg: '', istext: false, //判断是否输入正确提示
+      codename: '获取验证码', //验证码
+      disabled: false };}, methods: { // 点击获取验证码
+    yzTap: function yzTap() {var _this = this; // 获取验证码api接口
+      uni.request({ url: 'http://192.168.0.101:802/api/Sms/send', method: 'POST', data: { mobile: this.username }, success: function success(res) {console.log(res.data, '成功');} });if (this.username != '') {this.disabled = true; // var that = this;  this指向
+        var num = 61;var timer = setInterval(function () {num--;if (num <= 0) {_this.disabled = false;_this.codename = '重新发送';clearInterval(timer);} else {_this.codename = num + 's';console.log(_this.codename);}}, 1000);}}, // 点击下一步
+    nextTap: function nextTap() {// uni.request({
+      // 	url: 'http://192.168.0.101:802/api/user/register',
+      // 		method:'POST',
+      // 		data:{
+      // 			mobile:this.username,
+      // 			code:this.code,
+      // 			rec_phone:this.rec_phone
+      // 		},
+      // 		success: (res) => {
+      // 			if(res.data.code == 0){
+      // 				this.textMsg = res.data.msg
+      // 				this.istext = true
+      // 				console.log(res,'成功');
+      // 			}
+      // 			if(res.data.code == 1){
+      // 				this.istext = false
+      // 				uni.navigateTo({
+      // 					url:'../setcode/setcode'
+      // 				})
+      // 			}
+      // 		}
+      // })
+    }, isFocus: function isFocus() {this.istext = false;} } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 
@@ -307,6 +383,10 @@ var _default =
       default: '' },
 
     share: {
+      type: String,
+      default: '' },
+
+    bg: {
       type: String,
       default: '' } },
 

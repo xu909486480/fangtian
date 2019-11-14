@@ -1,7 +1,7 @@
 <template>
 	<view class="online">
 		<view class="detail_tabbar">
-			<view class="tabbar_inner1" @tap="aaa">
+			<view class="tabbar_inner1" @tap="isGuanzhu">
 				<image :src="onlineImg"></image> 
 				<text>{{guanzhu}}</text>
 			</view>
@@ -37,13 +37,36 @@
 		},
 		methods:{
 			ordertable(){
-				uni.navigateTo({
-					url:'../../pages/ordertable/ordertable' 
+				uni.request({
+					url:'http://shop_api.fang-tian.com/api_fang/house/appointment',
+					method:'POST',
+					data:{
+						followid:1,
+						type:2
+					},
+					success(res) {
+						console.log(res)
+					}
 				})
+				// uni.navigateTo({
+				// 	url:'../../pages/ordertable/ordertable' 
+				// })
 			},
-			aaa(){
-				this.guanzhu='已关注'	
-				this.onlineImg='../../static/newdetail_icon7_active.png'
+			isGuanzhu(){
+				// 登录后操作
+				uni.request({
+					url:'http://shop_api.fang-tian.com/api_fang/Agency/follow',
+					method:'POST',
+					data:{
+						followid:1,
+						type:2
+					},
+					success(res) {
+						console.log(res)
+					}
+				})
+				// this.guanzhu='已关注'	
+				// this.onlineImg='../../static/newdetail_icon7_active.png'
 			}
 		}
 	}

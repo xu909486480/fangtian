@@ -3,7 +3,7 @@
 		<view class="search_seek">
 			<view class="head_left">
 				<image src="../../static/index_icon3.png"></image>
-				<input type="text" placeholder="请输入校区、楼盘、商圈名" />
+				<input type="text" placeholder="请输入校区、楼盘、商圈名" v-model="value" focus @blur="searchApi"/>
 				<image src="../../static/search_icon1.png"></image>
 			</view>
 			<view class="head_right">
@@ -13,7 +13,7 @@
 		<view class="search_inner">
 			<view class="inner_top">
 				<text>历史搜索</text>
-				<text>清空</text>
+				<text @tap="historyApi">清空</text>
 			</view>
 			<view class="inner_bottom">
 				<text>湖里万科城</text>
@@ -35,7 +35,56 @@
 
 <script>
 	export default{
-		
+		data(){
+			return{
+				value:''
+			}
+		},
+		onLoad() {
+			this.SearchOld()
+		},
+		methods:{
+			// 历史搜索-热门搜索
+			SearchOld(){
+				uni.request({
+					url:'http://shop_api.fang-tian.com/api_fang/house/SearchOld',
+					methods:'POST',
+					data:{type:2}, 
+					success(res) {
+						console.log(res)
+					}
+				})
+			},
+			
+			searchApi(){
+				var that = this;
+				uni.request({
+					url:'http://shop_api.fang-tian.com/api_fang/house/searchHouse',
+					methods:'POST',
+					data:{
+						type:1,
+						search_name:this.value
+					}, 
+					success(res) {
+						console.log(res)
+						console.log(that.value)
+					}
+				})
+			},
+			historyApi(){
+				var that = this;
+				uni.request({
+					url:'http://shop_api.fang-tian.com/api_fang/house/DelSearchOld',
+					methods:'POST',
+					data:{
+						type:1
+					}, 
+					success(res) {
+						console.log(res)
+					}
+				})
+			}
+		}		
 	}
 </script>
 

@@ -1,6 +1,6 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["components/navbar/navbar"],{
 
-/***/ 552:
+/***/ 608:
 /*!*************************************************************************************!*\
   !*** C:/Users/wjy/Desktop/wx/house/main.js?{"page":"components%2Fnavbar%2Fnavbar"} ***!
   \*************************************************************************************/
@@ -144,6 +144,10 @@ var _default =
 
     share: {
       type: String,
+      default: '' },
+
+    bg: {
+      type: String,
       default: '' } },
 
 
@@ -194,5 +198,5 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ })
 
-},[[552,"common/runtime","common/vendor"]]]);
+},[[608,"common/runtime","common/vendor"]]]);
 //# sourceMappingURL=../../../.sourcemap/mp-weixin/components/navbar/navbar.js.map

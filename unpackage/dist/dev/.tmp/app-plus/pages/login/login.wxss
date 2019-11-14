@@ -122,19 +122,24 @@
     display: -ms-flexbox;
     display: flex;
     margin: 20rpx 0;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .reg_all .all_error image.data-v-234e5168 {
       width: 30rpx;
       height: 30rpx;
-      background: #09BB07;
 }
 .reg_all .all_error text.data-v-234e5168 {
+      margin-left: 10rpx;
       font-size: 26rpx;
       color: #ff3c3c;
       line-height: 36rpx;
 }
 .reg_xia.data-v-234e5168 {
   padding: 0 32rpx;
+  margin-top: 30rpx;
 }
 .reg_xia .xia_t.data-v-234e5168 {
     height: 90rpx;

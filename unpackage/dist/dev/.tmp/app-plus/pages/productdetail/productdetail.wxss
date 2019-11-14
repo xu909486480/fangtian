@@ -28,12 +28,10 @@
   position: relative;
   width: 750rpx;
   height: 560rpx;
-  background: #FFFFFF;
 }
 .detailswiper .index-img.data-v-1817ab72 {
     width: 750rpx;
     height: 560rpx;
-    background: #007AFF;
 }
 .detailswiper .newdetail_model.data-v-1817ab72 {
     position: absolute;

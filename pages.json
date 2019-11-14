@@ -41,6 +41,10 @@
 		{
 			"path": "pages/findcode/findcode"
 		},
+		// 定位地址
+		{
+			"path": "pages/address/address"
+		},
 		// 新房版本4  
 		{
 			"path": "pages/bridal/bridal"
@@ -225,7 +229,7 @@
 		},
 		// 期望租金
 		{
-			"path": "pages/expectrent/expectrent",
+			"path": "pages/expectrent/expectrent", 
 			"style":{
 				"usingComponents": {
 				  "van-search": "/wxcomponents/vant/dist/search/index"
@@ -241,7 +245,13 @@
 		},
 		// 房屋估价
 		{
-			"path": "pages/assess/assess"
+			"path": "pages/assess/assess",
+			"style":{
+				"usingComponents": {
+					"van-picker": "/wxcomponents/vant/dist/picker/index",
+					 "van-popup": "/wxcomponents/vant/dist/popup/index"
+				}
+			}
 		},
 		// 中介门店
 		{

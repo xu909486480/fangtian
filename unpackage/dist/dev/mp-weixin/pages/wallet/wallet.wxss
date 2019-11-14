@@ -26,7 +26,6 @@
 /* 文章场景相关 */
 .navbar.data-v-6530ba92 {
   padding: 0 32rpx;
-  background: #FFFFFF;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -81,10 +80,6 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.bg.data-v-64b9a2d0 {
-  height: 100%;
-  background: none;
-}
 .wallet_top.data-v-64b9a2d0 {
   padding-top: 100rpx;
   width: 750rpx;

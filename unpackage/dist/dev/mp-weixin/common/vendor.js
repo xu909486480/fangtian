@@ -1,6 +1,6 @@
-(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],[
-/* 0 */,
-/* 1 */
+(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],{
+
+/***/ 1:
 /*!************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js ***!
   \************************************************************/
@@ -1499,7 +1499,115 @@ var uni$1 = uni;var _default =
 uni$1;exports.default = _default;
 
 /***/ }),
-/* 2 */
+
+/***/ 14:
+/*!********************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode /* vue-cli only */
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+
+/***/ 2:
 /*!******************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js ***!
   \******************************************************************************************/
@@ -7461,7 +7569,8 @@ internalMixin(Vue);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../webpack/buildin/global.js */ 3)))
 
 /***/ }),
-/* 3 */
+
+/***/ 3:
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
   \***********************************/
@@ -7491,7 +7600,8 @@ module.exports = g;
 
 
 /***/ }),
-/* 4 */
+
+/***/ 4:
 /*!************************************************!*\
   !*** C:/Users/wjy/Desktop/wx/house/pages.json ***!
   \************************************************/
@@ -7502,7 +7612,8 @@ module.exports = g;
 
 
 /***/ }),
-/* 5 */
+
+/***/ 5:
 /*!*******************************************************!*\
   !*** ./node_modules/@dcloudio/uni-stat/dist/index.js ***!
   \*******************************************************/
@@ -8388,7 +8499,8 @@ main();
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 6 */
+
+/***/ 6:
 /*!******************************************************!*\
   !*** ./node_modules/@dcloudio/uni-stat/package.json ***!
   \******************************************************/
@@ -8398,7 +8510,55 @@ main();
 module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.0.0-23720191024001","_inBundle":false,"_integrity":"sha512-vJEk493Vdb8KueNzR2otzDi23rfyRcQBo/t1R41MwNGPk+AUB94gh10+HVLo98DRcvMzkuVofz3KXTAfEx24iw==","_location":"/@dcloudio/uni-stat","_phantomChildren":{},"_requested":{"type":"tag","registry":true,"raw":"@dcloudio/uni-stat@next","name":"@dcloudio/uni-stat","escapedName":"@dcloudio%2funi-stat","scope":"@dcloudio","rawSpec":"next","saveSpec":null,"fetchSpec":"next"},"_requiredBy":["#USER","/","/@dcloudio/vue-cli-plugin-uni"],"_resolved":"https://registry.npmjs.org/@dcloudio/uni-stat/-/uni-stat-2.0.0-23720191024001.tgz","_shasum":"18272814446a9bc6053bc92666ec7064a1767588","_spec":"@dcloudio/uni-stat@next","_where":"/Users/fxy/Documents/DCloud/HbuilderX-plugins/release/uniapp-cli","author":"","bugs":{"url":"https://github.com/dcloudio/uni-app/issues"},"bundleDependencies":false,"deprecated":false,"description":"","devDependencies":{"@babel/core":"^7.5.5","@babel/preset-env":"^7.5.5","eslint":"^6.1.0","rollup":"^1.19.3","rollup-plugin-babel":"^4.3.3","rollup-plugin-clear":"^2.0.7","rollup-plugin-commonjs":"^10.0.2","rollup-plugin-copy":"^3.1.0","rollup-plugin-eslint":"^7.0.0","rollup-plugin-json":"^4.0.0","rollup-plugin-node-resolve":"^5.2.0","rollup-plugin-replace":"^2.2.0","rollup-plugin-uglify":"^6.0.2"},"files":["dist","package.json","LICENSE"],"gitHead":"a725c04ef762e5df78a9a69d140c2666e0de05fc","homepage":"https://github.com/dcloudio/uni-app#readme","license":"Apache-2.0","main":"dist/index.js","name":"@dcloudio/uni-stat","repository":{"type":"git","url":"git+https://github.com/dcloudio/uni-app.git","directory":"packages/uni-stat"},"scripts":{"build":"NODE_ENV=production rollup -c rollup.config.js","dev":"NODE_ENV=development rollup -w -c rollup.config.js"},"version":"2.0.0-23720191024001"};
 
 /***/ }),
-/* 7 */
+
+/***/ 640:
+/*!***********************************************************!*\
+  !*** C:/Users/wjy/Desktop/wx/house/common/utils/axios.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var request = uni_request({ // 有效配置项只有三个
+  baseURL: 'http://shop_api.fang-tian.com/', //baseURL
+  timeout: 15000, // 超时时间
+  heaers: {
+    'x-custom-header': 'x-custom-header' } });
+
+
+
+request.interceptors.request.use(function (config) {// 请求拦截器（可以设置多个）
+  console.log('请求拦截器');
+  config.headers.TEST = 'TEST';
+  return config;
+});
+
+request.interceptors.response.use(function (response) {// 响应拦截器（可以设置多个）
+  var res = response.data;
+  if (res.code === 200) {
+    console.log('响应拦截器');
+  }
+  return response;
+});
+
+request.overtime = function () {// 超时钩子函数（可以设置多个）
+  console.log('超时了');
+};
+
+request.get('/').then(function (res) {
+  console.log(res);
+}).catch(function (e) {return console.error(e);});
+
+// 取消一个请求
+var task = request.get('/cancel'); // 如果想要取消某个请求，需要在 then 之前将 request.get 方法返回的 promise 对象保存在一个变量里
+task.then(function (res) {
+  console.log(res);
+}).catch(function (e) {return console.error(e);}); // 网络请求失败：主动取消
+task.cancel(); // 在需要的时候调用 cancel 方法，会使当前网络请求取消并且使 request.get 方法返回的 promise 进入 reject 状态，可被 catch 捕获，错误信息为 【网络请求失败：主动取消】
+
+/***/ }),
+
+/***/ 7:
 /*!*****************************************************************!*\
   !*** C:/Users/wjy/Desktop/wx/house/pages.json?{"type":"style"} ***!
   \*****************************************************************/
@@ -8406,10 +8566,11 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "usingComponents": { "detail": "/components/detail/detail", "alltab": "/components/alltab/alltab", "swiper": "/components/swiper/swiper", "grid": "/components/grid/grid" } }, "pages/shop/shop": { "usingComponents": {} }, "pages/news/news": { "usingComponents": {} }, "pages/my/my": { "navigationStyle": "custom", "usingComponents": { "grid": "/components/grid/grid" } }, "pages/reg/reg": { "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/setcode/setcode": { "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/login/login": { "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/findcode/findcode": { "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/bridal/bridal": { "usingComponents": { "detail": "/components/detail/detail", "swiper": "/components/swiper/swiper", "sometab": "/components/sometab/sometab", "sort": "/components/sort/sort", "alltab": "/components/alltab/alltab", "grid": "/components/grid/grid" } }, "pages/newlist/newlist": { "usingComponents": { "headnav": "/components/headnav/headnav", "sort": "/components/sort/sort", "alltab": "/components/alltab/alltab", "detail": "/components/detail/detail" } }, "pages/renting/renting": { "usingComponents": { "swiper": "/components/swiper/swiper", "sort": "/components/sort/sort", "detail": "/components/detail/detail", "grid": "/components/grid/grid" } }, "pages/familylist/familylist": { "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/joinhouse/joinhouse": { "navigationStyle": "custom", "usingComponents": { "detailswiper": "/components/detailswiper/detailswiper", "seat": "/components/seat/seat", "detail": "/components/detail/detail", "online": "/components/online/online" } }, "pages/ordertable/ordertable": { "usingComponents": { "detail": "/components/detail/detail", "navbar": "/components/navbar/navbar" } }, "pages/consider/consider": { "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/commission/commission": { "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/dynamiclist/dynamiclist": { "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/borker/borker": { "usingComponents": { "detail": "/components/detail/detail", "navbar": "/components/navbar/navbar" } }, "pages/secondhand/secondhand": { "usingComponents": { "headnav": "/components/headnav/headnav", "swiper": "/components/swiper/swiper", "sort": "/components/sort/sort", "alltab": "/components/alltab/alltab", "detail": "/components/detail/detail", "grid": "/components/grid/grid" } }, "pages/secondhanddetail/secondhanddetail": { "navigationStyle": "custom", "usingComponents": { "detailswiper": "/components/detailswiper/detailswiper", "alltab": "/components/alltab/alltab", "detail": "/components/detail/detail", "online": "/components/online/online" } }, "pages/plotdetail/plotdetail": { "navigationStyle": "custom", "usingComponents": { "detailswiper": "/components/detailswiper/detailswiper", "seat": "/components/seat/seat", "detail": "/components/detail/detail", "refer": "/components/refer/refer", "online": "/components/online/online" } }, "pages/ovistore/ovistore": { "usingComponents": { "headnav": "/components/headnav/headnav", "swiper": "/components/swiper/swiper", "detail": "/components/detail/detail", "grid": "/components/grid/grid" } }, "pages/productdetail/productdetail": { "navigationStyle": "custom", "usingComponents": { "detailswiper": "/components/detailswiper/detailswiper", "online": "/components/online/online", "alltab": "/components/alltab/alltab" } }, "pages/shopsort/shopsort": { "usingComponents": { "headnav": "/components/headnav/headnav" } }, "pages/ovistoredetail/ovistoredetail": { "navigationStyle": "custom", "usingComponents": { "detailswiper": "/components/detailswiper/detailswiper", "detail": "/components/detail/detail", "online": "/components/online/online" } }, "pages/offices/offices": { "usingComponents": { "navbar": "/components/navbar/navbar", "swiper": "/components/swiper/swiper", "sometab": "/components/sometab/sometab", "detail": "/components/detail/detail" } }, "pages/calculator/calculator": { "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/remark/remark": { "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/appraise/appraise": { "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/ambitus/ambitus": { "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/mapsearch/mapsearch": { "usingComponents": { "navbar": "/components/navbar/navbar", "sort": "/components/sort/sort" } }, "pages/mapsearchdetail/mapsearchdetail": { "usingComponents": { "navbar": "/components/navbar/navbar", "detail": "/components/detail/detail" } }, "pages/building/building": { "usingComponents": { "swiper": "/components/swiper/swiper" } }, "pages/loans/loans": { "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/mapsite/mapsite": { "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/issue/issue": { "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/areaname/areaname": { "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/areaban/areaban": { "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/expectrent/expectrent": { "usingComponents": { "navbar": "/components/navbar/navbar", "alltab": "/components/alltab/alltab", "detail": "/components/detail/detail" } }, "pages/housetype/housetype": { "navigationStyle": "custom", "usingComponents": { "detailswiper": "/components/detailswiper/detailswiper", "refer": "/components/refer/refer", "seat": "/components/seat/seat", "listfamily": "/components/listfamily/listfamily", "online": "/components/online/online" } }, "pages/assess/assess": { "usingComponents": {} }, "pages/agent/agent": { "usingComponents": { "headnav": "/components/headnav/headnav", "refer": "/components/refer/refer" } }, "pages/wallet/wallet": { "navigationStyle": "custom", "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/recharge/recharge": { "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/withdraw/withdraw": { "backgroundColor": "#F5F5F5", "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/mybill/mybill": { "usingComponents": { "navbar": "/components/navbar/navbar", "bill-detail": "/components/billDetail/billDetail" } }, "pages/monbill/monbill": { "usingComponents": { "navbar": "/components/navbar/navbar", "bill-detail": "/components/billDetail/billDetail" } }, "pages/member/member": { "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/authentication/authentication": { "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/agentdetail/agentdetail": { "usingComponents": { "alltab": "/components/alltab/alltab", "refer": "/components/refer/refer", "detail": "/components/detail/detail" } }, "pages/personal/personal": { "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/personalData/personalData": { "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/shopGuide/shopGuide": { "usingComponents": { "navbar": "/components/navbar/navbar" } }, "pages/myfocus/myfocus": { "usingComponents": { "navbar": "/components/navbar/navbar", "sometab": "/components/sometab/sometab", "detail": "/components/detail/detail" } }, "components/search/search": { "usingComponents": {} }, "components/grid/grid": { "usingComponents": {} }, "components/detail/detail": { "usingComponents": {} }, "components/billDetail/billDetail": { "usingComponents": {} }, "components/navbar/navbar": { "usingComponents": {} }, "components/newdetail/newdetail": { "navigationStyle": "custom", "usingComponents": { "detailswiper": "/components/detailswiper/detailswiper", "refer": "/components/refer/refer", "seat": "/components/seat/seat", "online": "/components/online/online" } }, "components/headnav/headnav": { "usingComponents": {} }, "components/swiper/swiper": { "usingComponents": {} }, "components/sort/sort": { "usingComponents": {} }, "components/alltab/alltab": { "usingComponents": {} }, "components/houselist/houselist": { "usingComponents": { "headnav": "/components/headnav/headnav", "sort": "/components/sort/sort", "alltab": "/components/alltab/alltab", "detail": "/components/detail/detail" } }, "components/detailswiper/detailswiper": { "usingComponents": {} }, "components/refer/refer": { "usingComponents": {} }, "components/seat/seat": { "usingComponents": {} }, "components/listfamily/listfamily": { "usingComponents": {} }, "components/online/online": { "usingComponents": {} }, "components/sometab/sometab": { "usingComponents": {} } }, "globalStyle": { "navigationBarBackgroundColor": "#FFFFFF", "backgroundColor": "#8F8F94", "navigationBarTitleText": "" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": {}, "pages/shop/shop": {}, "pages/news/news": {}, "pages/my/my": { "navigationStyle": "custom" }, "pages/reg/reg": {}, "pages/setcode/setcode": {}, "pages/login/login": {}, "pages/findcode/findcode": {}, "pages/address/address": {}, "pages/bridal/bridal": {}, "pages/newlist/newlist": {}, "pages/renting/renting": {}, "pages/familylist/familylist": {}, "pages/joinhouse/joinhouse": { "navigationStyle": "custom" }, "pages/ordertable/ordertable": {}, "pages/consider/consider": {}, "pages/commission/commission": {}, "pages/dynamiclist/dynamiclist": {}, "pages/borker/borker": {}, "pages/secondhand/secondhand": {}, "pages/secondhanddetail/secondhanddetail": { "navigationStyle": "custom" }, "pages/plotdetail/plotdetail": { "navigationStyle": "custom" }, "pages/ovistore/ovistore": {}, "pages/productdetail/productdetail": { "navigationStyle": "custom" }, "pages/shopsort/shopsort": {}, "pages/ovistoredetail/ovistoredetail": { "navigationStyle": "custom" }, "pages/offices/offices": {}, "pages/calculator/calculator": {}, "pages/remark/remark": {}, "pages/appraise/appraise": {}, "pages/ambitus/ambitus": {}, "pages/mapsearch/mapsearch": {}, "pages/mapsearchdetail/mapsearchdetail": {}, "pages/building/building": {}, "pages/loans/loans": {}, "pages/mapsite/mapsite": {}, "pages/issue/issue": {}, "pages/areaname/areaname": {}, "pages/areaban/areaban": {}, "pages/expectrent/expectrent": {}, "pages/housetype/housetype": { "navigationStyle": "custom" }, "pages/assess/assess": {}, "pages/agent/agent": {}, "pages/wallet/wallet": { "navigationStyle": "custom" }, "pages/recharge/recharge": {}, "pages/withdraw/withdraw": { "navigationBarBackgroundColor": "#F5F5F5", "backgroundColor": "#F5F5F5" }, "pages/mybill/mybill": {}, "pages/monbill/monbill": {}, "pages/member/member": {}, "pages/authentication/authentication": {}, "pages/cardInfo/cardInfo": {}, "pages/cardInformation/cardInformation": {}, "pages/certification/certification": {}, "pages/license/license": {}, "pages/licensePeople/licensePeople": {}, "pages/openAccount/openAccount": {}, "pages/agentdetail/agentdetail": {}, "pages/personal/personal": {}, "pages/personalData/personalData": {}, "pages/shopGuide/shopGuide": {}, "pages/myfocus/myfocus": {}, "components/search/search": {}, "components/grid/grid": {}, "components/detail/detail": {}, "components/billDetail/billDetail": {}, "components/navbar/navbar": {}, "components/newdetail/newdetail": { "navigationStyle": "custom" }, "components/headnav/headnav": {}, "components/swiper/swiper": {}, "components/sort/sort": {}, "components/alltab/alltab": {}, "components/houselist/houselist": {}, "components/detailswiper/detailswiper": {}, "components/refer/refer": {}, "components/seat/seat": {}, "components/listfamily/listfamily": {}, "components/online/online": {}, "components/sometab/sometab": {} }, "globalStyle": { "navigationBarBackgroundColor": "#FFFFFF", "backgroundColor": "#8F8F94", "navigationBarTitleText": "" } };exports.default = _default;
 
 /***/ }),
-/* 8 */
+
+/***/ 8:
 /*!****************************************************************!*\
   !*** C:/Users/wjy/Desktop/wx/house/pages.json?{"type":"stat"} ***!
   \****************************************************************/
@@ -8419,117 +8580,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "appid": "" };exports.default = _default;
 
-/***/ }),
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */
-/*!********************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
-  \********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
-/* globals __VUE_SSR_CONTEXT__ */
-
-// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
-// This module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle.
-
-function normalizeComponent (
-  scriptExports,
-  render,
-  staticRenderFns,
-  functionalTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
-) {
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
-
-  // render functions
-  if (render) {
-    options.render = render
-    options.staticRenderFns = staticRenderFns
-    options._compiled = true
-  }
-
-  // functional template
-  if (functionalTemplate) {
-    options.functional = true
-  }
-
-  // scopedId
-  if (scopeId) {
-    options._scopeId = 'data-v-' + scopeId
-  }
-
-  var hook
-  if (moduleIdentifier) { // server build
-    hook = function (context) {
-      // 2.3 injection
-      context =
-        context || // cached call
-        (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-      // 2.2 with runInNewContext: true
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-        context = __VUE_SSR_CONTEXT__
-      }
-      // inject component styles
-      if (injectStyles) {
-        injectStyles.call(this, context)
-      }
-      // register component module identifier for async chunk inferrence
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier)
-      }
-    }
-    // used by ssr in case component is cached and beforeCreate
-    // never gets called
-    options._ssrRegister = hook
-  } else if (injectStyles) {
-    hook = shadowMode
-      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
-      : injectStyles
-  }
-
-  if (hook) {
-    if (options.functional) {
-      // for template-only hot-reload because in that case the render fn doesn't
-      // go through the normalizer
-      options._injectStyles = hook
-      // register for functioal component in vue file
-      var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
-        return originalRender(h, context)
-      }
-    } else {
-      // inject component registration as beforeCreate hook
-      var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
-    }
-  }
-
-  return {
-    exports: scriptExports,
-    options: options
-  }
-}
-
-
 /***/ })
-]]);
+
+}]);
 //# sourceMappingURL=../../.sourcemap/mp-weixin/common/vendor.js.map

@@ -7,7 +7,7 @@
 		@gridList="gridList"
 		></grid>
 		<!-- 轮播图 -->
-		<swiper :swiper="swiper"></swiper>
+		<swiper :swiper="swiperList"></swiper>
 		<view class="secondhand_h3">
 			<text>全部房源</text>
 		</view>
@@ -18,7 +18,7 @@
 		<!-- 详情 -->
 		<detail :list="detail_list"></detail>
 	</view>
-</template>
+</template> 
 
 <script>
 	import headnav from '../../components/headnav/headnav.vue'
@@ -33,6 +33,7 @@
 			return {
 				gridListWidth:25,
 				share:'../../static/newdetail_icon6.png',
+				detail_list: [],
 				tab_list:[
 				{txt:'销量'},
 				{txt:'关注'},
@@ -43,9 +44,7 @@
 					{img: '../../static/bridal_icon2.png',text: '地图找房'},
 					{img: '../../static/bridal_icon2.png',text: '地铁附近'},
 					{img: '../../static/bridal_icon2.png',text: '最新房源'}],
-				swiper: [{img: '../../static/shop_banner.png'}, 
-						{img: '../../static/shop_banner.png'}, 
-						{img: '../../static/shop_banner.png'}],
+				swiperList: [],
 				styleheight:240,
 				sort: [ {text: '区域'},
 						{text: '价格'},
@@ -57,10 +56,12 @@
 					{text: '精选两居'},
 					{text: '7日新上'}
 				],
-				detail_list: [{"img": "../../static/index_list1.png","line1": "新出松柏二小精装大三房的撒多撒多阿萨德","price": 615},
-					{"img": "../../static/index_list1.png","line1": "厅带阳台朝南，南北通透的萨达萨达暗示的撒","price": 720},
-				],
 			}
+		},
+		onLoad() {
+			this.getSwiperApi()
+			this.getDetailApi()
+			
 		},
 		methods: {
 			gridList(index){
@@ -69,7 +70,32 @@
 						url:'../../components/houselist/houselist'
 					})
 				}
+			},
+			getSwiperApi(){
+				var that = this;
+				uni.request({
+					url:'http://192.168.0.102:9595/api_fang/house/bannerList',
+					method:'POST',
+					data:{seat:'2'}, 
+					success(res){
+						that.swiperList = res.data.data
+					}
+				})
+			},
+			// 二手房推荐API
+			getDetailApi(){
+				var that = this;
+				uni.request({
+					url:'http://shop_api.fang-tian.com/api_fang/house/secondHouseRecommend',
+					method:'POST',
+					data:{city_id:'350200'}, 
+					success(res){
+						that.detail_list = res.data.data.data
+						console.log(that.detail_list)
+					}
+				})
 			}
+			
 		}
 	}
 </script>

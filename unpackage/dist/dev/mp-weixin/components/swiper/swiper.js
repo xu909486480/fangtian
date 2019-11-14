@@ -122,7 +122,7 @@ var _default =
 {
   name: 'swiper',
   props: {
-    swiper: ['swiper'],
+    swiper: Array,
     styleheight: {
       type: Number,
       default: 240 },
@@ -172,7 +172,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 562:
+/***/ 618:
 /*!*************************************************************************************!*\
   !*** C:/Users/wjy/Desktop/wx/house/main.js?{"page":"components%2Fswiper%2Fswiper"} ***!
   \*************************************************************************************/
@@ -189,5 +189,5 @@ createPage(_swiper.default);
 
 /***/ })
 
-},[[562,"common/runtime","common/vendor"]]]);
+},[[618,"common/runtime","common/vendor"]]]);
 //# sourceMappingURL=../../../.sourcemap/mp-weixin/components/swiper/swiper.js.map

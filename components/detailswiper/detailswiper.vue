@@ -1,31 +1,36 @@
 <template>
 	<view class="detailswiper">
-		<swiper style="height: 560rpx;">
-			<swiper-item v-for="(item,index) in swiperlist" :key="index" circular>
-				<image class='index-img' :src="item.url"></image>
+		<swiper style="height: 560rpx;" interval="6000" autoplay @change="swiperNum" :current="current">
+			<swiper-item v-for="(item,index) in swiperList" :key="index" 
+			circular>
+				<image class='index-img' :src="item"></image>
 			</swiper-item>
 		</swiper>
-		<view class="newdetail_model"> 
-			<text>样板房</text>
-			<text>户型图</text> 
-		</view>
-		<view class="newdetail_frame">
-			<text>1/15张</text>
-		</view>
+				<!-- <view class="newdetail_model"> 
+					<text>样板房</text>
+					<text>户型图</text> 
+				</view> -->
+				<view class="newdetail_frame">
+					<text>{{current+1}}/{{swiperList.length}}张</text>
+				</view>
 	</view>
 </template>
 
 <script>
 	export default {
-		name:'detailswiper',
-		props:['swiperlist'],
+		name:'detaiLswiper',
+		props:{
+			swiperList:Array
+		},
 		data(){
 			return{
-				
+				current:0
 			}
 		},
 		methods:{
-			
+			swiperNum(e){
+				this.current = e.detail.current
+			}
 		}
 	}
 </script>
@@ -35,11 +40,9 @@
 		position: relative;
 		width: 750rpx;
 		height:560rpx ;
-		background: #FFFFFF;
 		.index-img {
 			width: 750rpx;
 			height:560rpx ;
-			background: #007AFF;
 		}
 		
 		.newdetail_model{

@@ -210,12 +210,9 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
 }
 .assess_c .c_list .list_tab text.data-v-1c337f90 {
+      margin-right: 20rpx;
       width: 156rpx;
       height: 60rpx;
       background: white;

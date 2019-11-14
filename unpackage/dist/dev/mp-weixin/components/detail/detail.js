@@ -136,26 +136,58 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   props: {
-    // list:{
-    // 	type:[Object,Array],
-    // 	default:['list']
-    // },
     list: [Object, Array],
-    index: Number },
+    listIndex: Number },
 
   data: function data() {
     return {};
 
-
   },
   methods: {
-    detailList: function detailList() {
-      uni.navigateTo({
-        url: '../../components/newdetail/newdetail' });
+    detailList: function detailList(index) {
+      var Id = this.list[index].Id;
+      var listIndex = this.listIndex;
+      console.log(Id);
+      if (listIndex == 0) {
+        // 二手房详情
+        uni.request({
+          url: 'http://shop_api.fang-tian.com/api_fang/house/secondHouseDetail',
+          method: 'POST',
+          data: { house_id: Id },
+          success: function success(res) {
+            var data = res.data.data;
+            uni.navigateTo({
+              url: '../../pages/secondhanddetail/secondhanddetail' + "?data=".concat(encodeURIComponent(JSON.stringify(data))) + "&id=".concat(listIndex) });
 
+          } });
+
+      } else if (listIndex == 1) {
+        // 租房详情
+        uni.request({
+          url: 'http://192.168.0.102:9595/api_fang/house/rentalDetail',
+          method: 'POST',
+          data: { house_id: Id },
+          success: function success(res) {
+            var data = res.data.data;
+            uni.navigateTo({
+              url: '../../pages/joinhouse/joinhouse' + "?data=".concat(encodeURIComponent(JSON.stringify(data))) + "&id=".concat(listIndex) });
+
+          } });
+
+      }
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
@@ -188,7 +220,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 550:
+/***/ 606:
 /*!*************************************************************************************!*\
   !*** C:/Users/wjy/Desktop/wx/house/main.js?{"page":"components%2Fdetail%2Fdetail"} ***!
   \*************************************************************************************/
@@ -205,5 +237,5 @@ createPage(_detail.default);
 
 /***/ })
 
-},[[550,"common/runtime","common/vendor"]]]);
+},[[606,"common/runtime","common/vendor"]]]);
 //# sourceMappingURL=../../../.sourcemap/mp-weixin/components/detail/detail.js.map

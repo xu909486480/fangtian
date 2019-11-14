@@ -181,7 +181,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 549:
+/***/ 605:
 /*!*********************************************************************************!*\
   !*** C:/Users/wjy/Desktop/wx/house/main.js?{"page":"components%2Fgrid%2Fgrid"} ***!
   \*********************************************************************************/
@@ -198,5 +198,5 @@ createPage(_grid.default);
 
 /***/ })
 
-},[[549,"common/runtime","common/vendor"]]]);
+},[[605,"common/runtime","common/vendor"]]]);
 //# sourceMappingURL=../../../.sourcemap/mp-weixin/components/grid/grid.js.map

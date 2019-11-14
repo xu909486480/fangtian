@@ -378,38 +378,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var _grid = _interopRequireDefault(__webpack_require__(/*! ../../components/grid/grid.vue */ 42));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //
 //
 //
@@ -484,43 +452,43 @@ var _grid = _interopRequireDefault(__webpack_require__(/*! ../../components/grid
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default = { components: { grid: _grid.default }, data: function data() {return { gridImgWidth: 48, gridImgHeight: 48, login_state: true, grid: [{ 'text': '我的钱包', 'img': '../../static/user_icon5.png' }, { 'text': '我的订单', 'img': '../../static/user_icon6.png' }, { 'text': '我的发布', 'img': '../../static/user_icon7.png' }, { 'text': '我的收藏', 'img': '../../static/user_icon8.png' }, { 'text': '我的关注', 'img': '../../static/user_icon9.png' }, { 'text': '我的会员', 'img': '../../static/user_icon10.png' }, { 'text': '我的团队', 'img': '../../static/user_icon11.png' }, { 'text': '认证中心', 'img': '../../static/user_icon12.png' }, { 'text': '我的预约', 'img': '../../static/user_icon13.png' }, { 'text': '浏览记录', 'img': '../../static/user_icon14.png' }], grid1: [{ 'text': '我的店铺', 'img': '../../static/user_icon15.png' }, { 'text': '房源管理', 'img': '../../static/user_icon16.png' }, { 'text': '预约管理', 'img': '../../static/user_icon17.png' }, { 'text': '共享房源', 'img': '../../static/user_icon18.png' }, { 'text': '新房代理', 'img': '../../static/user_icon19.png' }] };}, methods: { login_user: function login_user() {// uni.navigateTo({
-      // 	url:'../login/login'
-      // })
-      this.login_state = false; //有token为true
-      console.log(111);}, reg_user: function reg_user() {uni.navigateTo({ url: '../reg/reg' });}, gridList: function gridList(index) {if (index == 0) {uni.navigateTo({ url: '../wallet/wallet' });} else if (index == 4) {uni.navigateTo({ url: '../myfocus/myfocus' });} else if (index == 5) {uni.navigateTo({ url: '../member/member' });} else if (index == 7) {uni.navigateTo({ url: '../authentication/authentication' });}}, infoMsg: function infoMsg() {uni.navigateTo({ url: '../personal/personal' });}, guideTap: function guideTap() {
+var _default = { components: { grid: _grid.default }, data: function data() {return { gridImgWidth: 48, gridImgHeight: 48, login_state: true, grid: [{ 'text': '我的钱包', 'img': '../../static/user_icon5.png' }, { 'text': '我的订单', 'img': '../../static/user_icon6.png' }, { 'text': '我的发布', 'img': '../../static/user_icon7.png' }, { 'text': '我的收藏', 'img': '../../static/user_icon8.png' }, { 'text': '我的关注', 'img': '../../static/user_icon9.png' }, { 'text': '我的会员', 'img': '../../static/user_icon10.png' }, { 'text': '我的团队', 'img': '../../static/user_icon11.png' }, { 'text': '认证中心', 'img': '../../static/user_icon12.png' }, { 'text': '我的预约', 'img': '../../static/user_icon13.png' }, { 'text': '浏览记录', 'img': '../../static/user_icon14.png' }], grid1: [{ 'text': '我的店铺', 'img': '../../static/user_icon15.png' }, { 'text': '房源管理', 'img': '../../static/user_icon16.png' }, { 'text': '预约管理', 'img': '../../static/user_icon17.png' }, { 'text': '共享房源', 'img': '../../static/user_icon18.png' }, { 'text': '新房代理', 'img': '../../static/user_icon19.png' }] };}, methods: { // 跳转到登录页面
+    login_user: function login_user() {
+      uni.navigateTo({
+        url: '../login/login' });
+
+    },
+    // 跳转到注册页面
+    reg_user: function reg_user() {
+      uni.navigateTo({
+        url: '../reg/reg' });
+
+    },
+    gridList: function gridList(index) {
+      if (index == 0) {
+        uni.navigateTo({
+          url: '../wallet/wallet' });
+
+      } else if (index == 4) {
+        uni.navigateTo({
+          url: '../myfocus/myfocus' });
+
+      } else if (index == 5) {
+        uni.navigateTo({
+          url: '../member/member' });
+
+      } else if (index == 7) {
+        uni.navigateTo({
+          url: '../authentication/authentication' });
+
+      }
+    },
+    infoMsg: function infoMsg() {
+      uni.navigateTo({
+        url: '../personal/personal' });
+
+    },
+    guideTap: function guideTap() {
       uni.navigateTo({
         url: '../shopGuide/shopGuide' });
 

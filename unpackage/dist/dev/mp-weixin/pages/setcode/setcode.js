@@ -127,6 +127,10 @@ var _default =
 
     share: {
       type: String,
+      default: '' },
+
+    bg: {
+      type: String,
       default: '' } },
 
 
